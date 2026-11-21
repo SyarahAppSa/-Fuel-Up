@@ -895,6 +895,22 @@ i[data-ic] svg{width:100%;height:100%}
 .hdr .burger{background:transparent;border-color:rgba(255,255,255,.25);color:#fff}
 @media (max-width:1120px){.hdr .nav{background:#0B2463;border:1px solid rgba(255,255,255,.12)}.hdr .nav a{border-bottom-color:rgba(255,255,255,.1)}}
 
+/* formal utility bar */
+.topbar{background:#06122F;border-bottom:1px solid rgba(255,255,255,.06);font-size:.78rem;color:#AEB7D6}
+.topbar .wrap.tb{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:38px;flex-wrap:nowrap}
+.tb-g{display:flex;align-items:center;gap:0}
+.tb-i{display:inline-flex;align-items:center;gap:7px;padding-inline:14px;border-inline-start:1px solid rgba(255,255,255,.1);white-space:nowrap}
+.tb-g>.tb-i:first-child{border-inline-start:0;padding-inline-start:0}
+.tb-i svg{width:14px;height:14px;color:#8B7CF6;flex-shrink:0}
+.tb-i b{font-weight:500;color:#E4E8F5;user-select:all}
+.topbar .date{color:#AEB7D6;font-weight:400}
+.tb-247 i{width:7px;height:7px;border-radius:50%;background:#2E9E6B;box-shadow:0 0 0 3px rgba(46,158,107,.2)}
+.tb-login{display:inline-flex;align-items:center;gap:6px;margin-inline-start:14px;padding:4px 12px;border:1px solid rgba(255,255,255,.18);border-radius:999px;color:#fff;text-decoration:none;font-weight:500}
+.tb-login svg{width:13px;height:13px}
+.tb-login:hover{border-color:#C9BFFF;background:rgba(139,124,246,.12)}
+@media (max-width:1000px){.tb-247,.topbar .mail{display:none}}
+@media (max-width:640px){.topbar .wrap.tb{min-height:34px}.tb-g:first-child{display:none}.tb-g{width:100%;justify-content:space-between}.tb-login{margin:0}}
+
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
 .opsroom{background:radial-gradient(45% 60% at 85% 0%,rgba(139,124,246,.18),rgba(6,18,47,0) 70%),radial-gradient(40% 50% at 5% 100%,rgba(139,124,246,.10),rgba(6,18,47,0) 70%),#06122F;color:#fff;padding-block:clamp(64px,8vw,104px)}
@@ -1098,12 +1114,16 @@ i[data-ic] svg{width:100%;height:100%}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="wrap">
-  <span id="today" class="date"></span>
-  <span class="welcome">أهلًا بكم في فيول آب</span>
-  <span>الرقم الموحد: <b class="ltr">920009088</b></span>
-  <span class="mail">البريد: <b class="ltr">Info@Fuelapp.sa</b></span>
-  <span class="sp"><a href="#platform">دخول العملاء</a><a href="#contact">خدمة على مدار الساعة</a></span>
+<div class="topbar"><div class="wrap tb">
+  <div class="tb-g">
+    <span class="tb-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="1.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span id="today" class="date"></span></span>
+    <span class="tb-i tb-247"><i aria-hidden="true"></i>فريق التشغيل متاح 24/7</span>
+  </div>
+  <div class="tb-g">
+    <span class="tb-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><b class="ltr">920009088</b></span>
+    <span class="tb-i mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><b class="ltr">Info@Fuelapp.sa</b></span>
+    <a class="tb-login" href="#platform"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>دخول العملاء</a>
+  </div>
 </div></div>
 <header class="hdr"><div class="wrap"><div class="hcard">
   <a class="brand" href="#home"><img src="assets/logo-white.webp" width="46" height="46" alt=""><span><b>فيول آب</b><small>إحدى علامات شركة ميسان</small></span></a>
