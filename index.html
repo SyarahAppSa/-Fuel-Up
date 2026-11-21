@@ -820,6 +820,19 @@ i[data-ic] svg{width:100%;height:100%}
 .quick small{font-size:.74rem}
 @media (max-width:900px){.slide .wrap{padding-block:110px 110px}#heroMap svg{max-height:260px}}
 
+/* giga projects (home) */
+.proj .title p{color:var(--mut);max-width:60ch}
+.gp-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.gp{border:1px solid var(--line);border-radius:16px;background:#fff;overflow:hidden;display:grid;grid-template-rows:auto auto;transition:transform .2s,box-shadow .2s}
+.gp:hover{transform:translateY(-3px);box-shadow:0 18px 30px -24px rgba(11,36,99,.55)}
+.gp-logo{aspect-ratio:16/10;max-width:100%;display:grid;place-items:center;padding:14px 16px}
+.gp-logo img{max-width:100%;max-height:64px;object-fit:contain}
+.gp-t{border-top:1px solid var(--line);padding:9px 12px;display:grid;gap:1px;background:var(--sky)}
+.gp-t b{font-size:.85rem;color:var(--blue-d);font-family:var(--f-d)}
+.gp-t small{font-size:.74rem;color:var(--mut)}
+@media (max-width:1100px){.gp-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:620px){.gp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
 .opsroom{background:radial-gradient(45% 60% at 85% 0%,rgba(139,124,246,.18),rgba(6,18,47,0) 70%),radial-gradient(40% 50% at 5% 100%,rgba(139,124,246,.10),rgba(6,18,47,0) 70%),#06122F;color:#fff;padding-block:clamp(64px,8vw,104px)}
@@ -1081,19 +1094,8 @@ i[data-ic] svg{width:100%;height:100%}
 </div></section>
 
 <section class="sec proj" aria-labelledby="h-proj"><div class="wrap">
-  <div class="title split-t"><div><span class="k">مشاريع</span><h2 id="h-proj">مشاريع نفخر بتشغيلها</h2></div><a class="more" href="#clients">قصص المشاريع <span class="flip" aria-hidden="true">←</span></a></div>
-  <div class="proj-grid">
-    <article class="pcard"><div class="pbody"><h3>اسم المشروع</h3>
-        <dl class="pmeta"><div><dt>القطاع</dt><dd>المشاريع والمقاولات</dd></div><div><dt>نوع الخدمة</dt><dd>توريد ديزل ميداني</dd></div></dl>
-        <p>توريد مجدول لمولدات ومعدات الموقع، بتنسيق مسبق مع مسؤول الموقع وفاتورة إلكترونية لكل تسليم.</p></div></article>
-    <article class="pcard"><div class="pbody"><h3>اسم المشروع</h3>
-        <dl class="pmeta"><div><dt>القطاع</dt><dd>الطرق والبنية التحتية</dd></div><div><dt>نوع الخدمة</dt><dd>نقل البيتومين وMC1</dd></div></dl>
-        <p>تحميل من مواقع أرامكو ونقل بشاحنات بخزانات مخصصة، وتسليم موثّق في موقع المشروع.</p></div></article>
-    <article class="pcard"><div class="pbody"><h3>اسم المشروع</h3>
-        <dl class="pmeta"><div><dt>القطاع</dt><dd>الصناعة</dd></div><div><dt>نوع الخدمة</dt><dd>عقد توريد منتظم</dd></div></dl>
-        <p>جدول توريد ثابت لخطوط الإنتاج والمولدات، مع متابعة الطلبات والفواتير من المنصة.</p></div></article>
-  </div>
-  <p class="proj-note">تُعرض هنا المشاريع المعتمدة بأسمائها بعد موافقة أصحابها.</p>
+  <div class="title split-t"><div><span class="k">مشاريع وطنية عملاقة</span><h2 id="h-proj">مشاريع نفخر بتشغيلها</h2><p>منذ 2019 وصل وقودنا إلى مواقع أكبر المشاريع الوطنية في المملكة، عبر كبرى شركات المقاولات المنفذة لها.</p></div><a class="more" href="#clients">العملاء والمشاريع <span class="flip" aria-hidden="true">←</span></a></div>
+  <div class="gp-grid"><article class="gp"><div class="gp-logo"><img src="assets/logos/p-neom.webp" alt="نيوم" loading="lazy"></div><div class="gp-t"><b>نيوم</b><small>تبوك</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-redsea.webp" alt="البحر الأحمر الدولية" loading="lazy"></div><div class="gp-t"><b>البحر الأحمر الدولية</b><small>ساحل البحر الأحمر</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-qiddiya.webp" alt="القدية" loading="lazy"></div><div class="gp-t"><b>القدية</b><small>الرياض</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-diriyah.webp" alt="الدرعية" loading="lazy"></div><div class="gp-t"><b>الدرعية</b><small>الرياض</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-kingsalmanpark.webp" alt="حديقة الملك سلمان" loading="lazy"></div><div class="gp-t"><b>حديقة الملك سلمان</b><small>الرياض</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-newmurabba.webp" alt="المربع الجديد" loading="lazy"></div><div class="gp-t"><b>المربع الجديد</b><small>الرياض</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-ksia.webp" alt="مطار الملك سلمان الدولي" loading="lazy"></div><div class="gp-t"><b>مطار الملك سلمان الدولي</b><small>الرياض</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-roshn.webp" alt="روشن" loading="lazy"></div><div class="gp-t"><b>روشن</b><small>مدن المملكة</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-amaala.webp" alt="أمالا" loading="lazy"></div><div class="gp-t"><b>أمالا</b><small>ساحل البحر الأحمر</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-alula.webp" alt="العلا" loading="lazy"></div><div class="gp-t"><b>العلا</b><small>العلا</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-sportsboulevard.webp" alt="المسار الرياضي" loading="lazy"></div><div class="gp-t"><b>المسار الرياضي</b><small>الرياض</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-jeddahcentral.webp" alt="وسط جدة" loading="lazy"></div><div class="gp-t"><b>وسط جدة</b><small>جدة</small></div></article></div>
 </div></section>
 
 <section class="sec vmv" aria-labelledby="h-why"><div class="wrap">
