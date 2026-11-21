@@ -783,6 +783,21 @@ i[data-ic] svg{width:100%;height:100%}
 @media (max-width:1000px){.app .feat{grid-template-columns:1fr 1fr}}
 @media (max-width:900px){.app-grid{grid-template-columns:1fr}.app-vis{justify-self:center}}
 .app-grid{max-width:var(--wrap,1280px)}
+/* compact home services */
+.svc-wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.svc-list{gap:6px}
+.svc-btn{grid-template-columns:38px 1fr auto;gap:12px;padding:8px 14px;border-radius:12px}
+.svc-btn .ic{width:38px;height:38px;border-radius:10px}
+.svc-btn .ic svg{width:19px;height:19px}
+.svc-btn b{font-size:.95rem}
+.svc-btn small{font-size:.78rem}
+.svc-panel{min-height:0;padding:clamp(20px,2.4vw,30px);gap:12px;border-radius:18px}
+.svc-panel .big{font-size:clamp(1.25rem,1rem + .8vw,1.65rem)}
+.svc-panel .big span{border-width:1.5px;border-radius:10px;padding:0 10px;margin-top:4px}
+.svc-panel p{font-size:.92rem}
+.svc-panel ul{gap:4px;font-size:.9rem}
+.svc-panel .btn{min-height:42px;padding:0 20px;font-size:.9rem}
+.svc-panel::after{width:180px;height:180px;border-width:28px}
 
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
