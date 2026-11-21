@@ -680,6 +680,27 @@ i[data-ic] svg{width:100%;height:100%}
 /* project cards without image */
 .pcard{grid-template-rows:auto;border-top:4px solid var(--blue-d)}
 .pbody{padding:26px 24px 26px}
+
+/* real photos (Fuel App corporate profile 2026) */
+.cap-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:22px;align-items:stretch}
+.cap-photo,.res-photo{margin:0;border-radius:22px;overflow:hidden;position:relative;background:#0B2463}
+.cap-photo img,.res-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.cap-photo{aspect-ratio:16/10;max-width:100%}
+.cap-photo figcaption,.res-photo figcaption{position:absolute;inset-inline:0;bottom:0;padding:28px 18px 14px;color:#fff;font-size:.88rem;background:linear-gradient(0deg,rgba(6,18,47,.85),rgba(6,18,47,0))}
+.cap-grid .tanks{grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+.cap-grid .tank{background:var(--sky);border-radius:18px;padding:20px 18px;justify-items:start;text-align:start;align-content:center;gap:2px;border:1px solid var(--line)}
+.cap-grid .tank b{font-size:clamp(1.6rem,1.2rem + 1vw,2.1rem);line-height:1.1}
+.cap-grid .tank .u{color:var(--blue);font-weight:600;font-size:.9rem}
+.cap-grid .tank span:last-child{color:var(--mut);font-size:.88rem}
+@media (max-width:900px){.cap-grid{grid-template-columns:1fr}}
+.mats-col{display:grid;gap:16px;min-width:0}
+.res-photo{aspect-ratio:1132/560;max-width:100%}
+.res-photo img{object-position:center 60%}
+.about-vis.photo{background:#0B2463;aspect-ratio:4/3.4}
+.about-vis.photo::before{display:none}
+.about-vis.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:none}
+.about-vis.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,18,47,.75),rgba(6,18,47,0) 50%)}
+.facts{background:linear-gradient(0deg,rgba(11,36,99,.9),rgba(11,36,99,.9)),url("assets/photos/depot.webp") center/cover no-repeat}
 </style>
 </head>
 <body>
@@ -815,7 +836,7 @@ i[data-ic] svg{width:100%;height:100%}
       <div class="val"><b>متابعة رقمية</b><span>طلبات وفواتير وحالة توريد موثقة عبر تطبيق فيول آب.</span></div>
     </div>
   </div>
-  <div class="about-vis" aria-hidden="true"><img src="assets/logo-white.webp" width="248" height="250" alt=""><span class="since"><small>نعمل منذ</small><b class="m">2018</b></span></div>
+  <div class="about-vis photo"><img src="assets/photos/diesel-delivery.webp" width="1200" height="900" alt="فريق فيول آب يورّد الديزل لخزان في موقع عميل مع حواجز السلامة"><span class="since"><small>نعمل منذ</small><b class="m">2018</b></span></div>
 </div></section>
 <section class="sec" style="background:var(--sky)" aria-labelledby="h-safe"><div class="wrap">
   <div class="title"><span class="k">السلامة والالتزام</span><h2 id="h-safe">تشغيل آمن… موثّق بالكامل</h2><p>نعمل ضمن نشاط مرخّص، ونطبّق إجراءات تشغيل واضحة على كل عملية نقل وتوريد.</p></div>
@@ -840,17 +861,22 @@ i[data-ic] svg{width:100%;height:100%}
     <div><div class="title"><span class="k">نقل الموارد</span><h2 id="h-res">من أرامكو… إلى موقعك</h2><p>نقل الخام والبيتومين وMC1 وMC2 من مواقع أرامكو إلى مواقع أعمالك، بشاحنات بخزانات سوداء مخصصة لهذه المواد وبهوية فيول آب.</p></div>
       <ol class="res-flow"><li><b>تحميل</b><span>من مواقع أرامكو</span></li><li><b>نقل</b><span>بشاحنات مخصصة</span></li><li><b>تسليم موثّق</b><span>في موقعك</span></li></ol>
       <a class="btn btn-o" href="#contact">اطلب نقل الموارد</a></div>
+    <div class="mats-col"><figure class="res-photo"><img src="assets/photos/aramco-tankers.webp" width="1132" height="768" loading="lazy" alt="شاحنتان من فيول آب بخزانات سوداء عند موقع تحميل صناعي"><figcaption>شاحنات بخزانات سوداء مخصصة لنقل هذه المواد، بهوية فيول آب.</figcaption></figure>
     <div class="mats">
       <article><small class="m">01</small><h3>خام</h3><p>نقل الخام من مواقع التحميل إلى مواقع التشغيل.</p></article>
       <article><small class="m">02</small><h3>بيتومين</h3><p>نقل البيتومين من المصافي إلى مواقع المشاريع.</p></article>
       <article><small class="m">03</small><h3 class="ltr">MC1</h3><p>نقل MC1 لتطبيقات رش الطرق الباردة.</p></article>
       <article><small class="m">04</small><h3 class="ltr">MC2</h3><p>نقل MC2 حسب مواصفات واحتياج كل مشروع.</p></article>
     </div>
+    </div>
   </div>
 </div></section>
 <section class="sec" aria-labelledby="h-cap"><div class="wrap">
   <div class="title"><span class="k">القدرة التشغيلية</span><h2 id="h-cap">صهريج لكل حجم احتياج</h2><p>أربع سعات تتيح لنا خدمة الموقع الصغير والمشروع الضخم بنفس الالتزام.</p></div>
-  <div class="tanks" id="tanks"></div>
+  <div class="cap-grid">
+    <figure class="cap-photo"><img src="assets/photos/fleet-yard.webp" width="1600" height="900" loading="lazy" alt="صهاريج فيول آب مصطفة في ساحة التشغيل"><figcaption>جزء من أسطول فيول آب في ساحة التشغيل</figcaption></figure>
+    <div class="tanks" id="tanks"></div>
+  </div>
 </div></section>
 <section class="sec" style="background:var(--sky)" aria-labelledby="h-sec"><div class="wrap">
   <div class="title"><span class="k">القطاعات</span><h2 id="h-sec">نخدم كل موقع يعمل بالوقود</h2><p>نصمم نموذج التوريد حسب طبيعة موقعك وساعات عمله ومن يستلم.</p></div>
@@ -1055,7 +1081,7 @@ $("journey").innerHTML=JOURNEY.map(function(j,i){return '<li><span class="n">0'+
 $("sectList").innerHTML=SECT.map(function(s){return '<article class="sc"><span class="ic" style="background:'+s[2]+'">'+svg(s[0])+'</span><h3>'+e(s[1])+'</h3><p>'+e(s[3])+'</p></article>'}).join("");
 $("svcGrid").innerHTML=SVC.map(function(s,i){return '<article class="svc-card" id="svc-'+s.id+'"><span class="ic"><i data-ic="'+s.ic+'"></i></span><span class="no">0'+(i+1)+'</span><h3>'+e(s.t)+'</h3><p>'+e(s.d)+'</p><ul>'+s.li.map(function(x){return '<li>'+e(x)+'</li>'}).join("")+'</ul></article>'}).join("");
 $("ftrSvc").innerHTML=SVC.slice(0,5).map(function(s){return '<li><a href="#services">'+e(s.t)+'</a></li>'}).join("");
-$("tanks").innerHTML=TANKS.map(function(t){var w=Math.round(110+t[0]/36000*130);return '<div class="tank"><svg viewBox="0 0 260 110" aria-hidden="true"><rect x="'+(250-w)+'" y="'+(70-28-t[0]/36000*22)+'" width="'+(w-40)+'" height="'+(28+t[0]/36000*22)+'" rx="'+(14+t[0]/36000*11)+'" fill="#163E96"/><rect x="'+(250-w+12)+'" y="'+(70-28-t[0]/36000*22+6)+'" width="'+(w-64)+'" height="6" rx="3" fill="#6638B6" opacity=".6"/><rect x="214" y="38" width="36" height="32" rx="6" fill="#F37421"/><rect x="222" y="44" width="16" height="12" rx="2" fill="#fff"/><rect x="'+(250-w)+'" y="70" width="'+w+'" height="8" rx="4" fill="#0B2463"/><circle cx="'+(250-w+24)+'" cy="86" r="10" fill="#0F1A3A"/><circle cx="'+(250-w+50)+'" cy="86" r="10" fill="#0F1A3A"/><circle cx="228" cy="86" r="10" fill="#0F1A3A"/></svg><b class="m">'+t[0].toLocaleString("en-US")+'</b><span>لتر · '+e(t[1])+'</span></div>'}).join("");
+$("tanks").innerHTML=TANKS.map(function(t){return '<div class="tank"><b class="m">'+t[0].toLocaleString("en-US")+'</b><span class="u">لتر</span><span>'+e(t[1])+'</span></div>'}).join("");
 /* form selects */
 $("q-sector").innerHTML='<option value="">اختر</option>'+SECT.map(function(s){return '<option>'+e(s[1])+'</option>'}).join("")+'<option>أخرى</option>';
 $("q-service").innerHTML='<option value="">اختر</option>'+SVC.map(function(s){return '<option>'+e(s.t)+'</option>'}).join("");
