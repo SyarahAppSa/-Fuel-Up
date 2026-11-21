@@ -701,6 +701,22 @@ i[data-ic] svg{width:100%;height:100%}
 .about-vis.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:none}
 .about-vis.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,18,47,.75),rgba(6,18,47,0) 50%)}
 .facts{background:linear-gradient(0deg,rgba(11,36,99,.9),rgba(11,36,99,.9)),url("assets/photos/depot.webp") center/cover no-repeat}
+/* compact, formal conversion strip + permits */
+.convert{padding-block:36px 8px}
+.conv-card{grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:22px 28px;border-radius:16px;background:linear-gradient(90deg,#0B2463,#132E7A)}
+.conv-card .k{display:none}
+.conv-card h2{font-size:clamp(1.1rem,.95rem + .6vw,1.4rem);margin-top:0;font-weight:700}
+.conv-card p{font-size:.9rem;margin-top:4px}
+.conv-list{display:none}
+.conv-acts{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.conv-acts .btn{min-height:44px;padding:0 22px;font-size:.95rem}
+.conv-acts span{font-size:.85rem}
+@media (max-width:760px){.conv-card{grid-template-columns:1fr;padding:20px}.conv-acts{flex-direction:column;align-items:stretch;text-align:center}}
+.permits{padding-block:22px 4px}
+.permits h2{font-size:.9rem;margin-bottom:10px}
+.plogos{gap:10px}
+.plogos .logo{min-height:60px;padding:8px 12px;border-radius:12px}
+.plogos .logo img{max-height:36px}
 
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
