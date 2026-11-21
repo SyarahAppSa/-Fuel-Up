@@ -798,6 +798,27 @@ i[data-ic] svg{width:100%;height:100%}
 .svc-panel ul{gap:4px;font-size:.9rem}
 .svc-panel .btn{min-height:42px;padding:0 20px;font-size:.9rem}
 .svc-panel::after{width:180px;height:180px;border-width:28px}
+/* wider layout site-wide, shorter hero */
+.wrap{max-width:1480px;padding-left:max(28px,env(safe-area-inset-left,0px));padding-right:max(28px,env(safe-area-inset-right,0px))}
+.slide{min-height:clamp(460px,38vw,540px)}
+.slide .wrap{padding-block:120px 96px;gap:clamp(20px,3vw,48px)}
+.s-in{gap:16px}
+.s-in h1,.s-in h2{font-size:clamp(1.9rem,1.2rem + 2.3vw,3.3rem)}
+.s-in p{font-size:1rem;max-width:52ch}
+.s-acts .btn{min-height:46px;padding:0 22px;font-size:.95rem}
+.s-tag{font-size:.8rem}
+#heroMap svg{max-height:340px;width:auto;max-width:100%;margin-inline:auto;display:block}
+.trk{max-width:420px}
+.trk-map{max-height:150px}
+.frames .fw{font-size:clamp(1.3rem,.9rem + 1.4vw,2.1rem);padding:4px 22px}
+.frames .fw.small{font-size:1rem}
+.s-ctrl{bottom:58px}
+.arr{width:38px;height:38px}
+.quick a,.quick>.wrap>div{padding:12px 12px}
+.quick i[data-ic]{width:24px;height:24px}
+.quick b{font-size:.9rem}
+.quick small{font-size:.74rem}
+@media (max-width:900px){.slide .wrap{padding-block:110px 110px}#heroMap svg{max-height:260px}}
 
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
