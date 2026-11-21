@@ -536,6 +536,146 @@ i[data-ic] svg{width:100%;height:100%}
 @media (max-width:1100px){.ftr .wrap{grid-template-columns:1fr 1fr 1fr}}
 @media (max-width:640px){.ftr .wrap{grid-template-columns:1fr 1fr}.ftr .wrap>div:first-child{grid-column:1/-1}}
 .nav a.on{color:var(--blue)}
+
+/* ================= v4: navy-led identity, calmer type scale =================
+   Navy = brand base. Orange = CTA + live operations only. Lavender = platform / technology, used quietly. */
+:root{--lav:#8B7CF6;--lav-d:#5B4BC9;--lav-soft:#EEEBFF;--navy-0:#06122F}
+/* type scale */
+.s-in h1,.s-in h2{font-size:clamp(2.1rem,1.3rem + 2.9vw,4rem);line-height:1.22}
+.s-in p{font-size:1.08rem}
+.title h2{font-size:clamp(1.7rem,1.1rem + 1.9vw,2.5rem);line-height:1.3}
+.phero h1{font-size:clamp(1.85rem,1.2rem + 2vw,2.5rem);line-height:1.3}
+.phero p{font-size:1.05rem}
+.svc-panel .big{font-size:clamp(1.6rem,1.1rem + 1.4vw,2.4rem)}
+.svc-panel .big span{border-width:2px;padding:0 14px}
+.band b{font-size:clamp(2.6rem,1.8rem + 2.4vw,4rem)}
+.band span{font-size:clamp(1.05rem,.9rem + .6vw,1.4rem)}
+.fact b{font-size:clamp(1.8rem,1.3rem + 1.2vw,2.5rem)}
+.app h2{font-size:clamp(1.7rem,1.1rem + 1.9vw,2.5rem)}
+.why5 h3,.sc h3,.svc-card h3{font-size:1.15rem}
+.fw{font-size:clamp(1.6rem,1rem + 2vw,2.8rem)}
+@media (max-width:560px){.s-in h1,.s-in h2{line-height:1.3}.title h2{line-height:1.35}}
+
+/* navy heroes */
+.s1{background:radial-gradient(55% 80% at 18% 40%,rgba(139,124,246,.22),rgba(11,36,99,0) 70%),linear-gradient(125deg,#06122F 0%,#0B2463 55%,#163E96 100%)}
+.s2{background:radial-gradient(60% 80% at 80% 30%,rgba(243,116,33,.16),rgba(11,36,99,0) 70%),linear-gradient(125deg,#0B2463 0%,#06122F 100%)}
+.s2 .s-in p{color:#D9E0F5}
+.s2 .s-in h2 span{color:#FFB98A}
+.s3{background:radial-gradient(60% 80% at 25% 50%,rgba(139,124,246,.25),rgba(11,36,99,0) 70%),linear-gradient(125deg,#0B2463 0%,#132E7A 100%)}
+.s3 .s-in h2 span{color:#C9BFFF}
+.s1 .s-in h1 span{color:#FFB98A}
+.fw{border-color:rgba(255,255,255,.55)}
+.fw.alt{background:#fff;color:var(--blue-d)}
+.phero{background:radial-gradient(50% 120% at 15% 30%,rgba(139,124,246,.22),rgba(11,36,99,0) 70%),linear-gradient(125deg,#06122F 0%,#0B2463 60%,#163E96 100%)}
+.phero p{color:#D9E0F5}
+.crumbs{color:#C9D3F0}
+
+/* orange only for CTA + operations */
+.title .k{color:var(--blue)}
+.title .k::before,.cl-t .k::after{background:var(--lav)}
+.quick{background:#0B2463}
+.quick svg{color:#FF9A57}
+.quick a:hover{background:rgba(255,255,255,.06)}
+.quick .wrap>*{border-color:rgba(255,255,255,.12)}
+.quick small{color:#B9C4E6}
+.band{background:#06122F;border-bottom:1px solid rgba(255,255,255,.08)}
+.band b{color:#FF9A57}
+.band span{border-color:rgba(255,255,255,.25)}
+.facts{background:#0B2463}
+.fact .ic::before{background:rgba(255,154,87,.22)}
+.svc-btn[aria-selected="true"]{border-color:var(--blue-d);box-shadow:0 14px 30px -18px rgba(11,36,99,.55)}
+.svc-btn[aria-selected="true"] .ic{background:var(--blue-d);color:#fff}
+.svc-btn[aria-selected="true"] .chev{color:var(--blue-d)}
+.svc-panel{background:linear-gradient(140deg,#0B2463,#06122F)}
+.svc-panel::after{border-color:rgba(139,124,246,.16)}
+.svc-panel .big span{border-color:rgba(255,255,255,.5);color:#fff}
+.svc-panel li::before{background:#FF9A57}
+.more{border-bottom-color:var(--lav)}
+.more:hover{color:var(--blue-d)}
+.sc .ic{background:var(--blue-d)!important}
+.safe4 i[data-ic]{background:#E8EEFB;color:var(--blue)}
+.svc-card .ic{background:linear-gradient(140deg,#0B2463,#163E96)}
+.svc-card li::before{background:var(--blue)}
+.res::before{background:radial-gradient(closest-side,rgba(139,124,246,.25),transparent)}
+.mats article::before{background:linear-gradient(90deg,var(--lav),rgba(139,124,246,.2))}
+.mats small{color:#C9BFFF}
+/* lavender, quietly, for platform + technology */
+.why5 .blob{color:var(--lav-d)}
+.why5 .blob::before{background:var(--lav-soft)}
+.why5 small{color:var(--lav-d)}
+.app{background:linear-gradient(180deg,#F4F3FF,#F1F4FB)}
+.app h2 span{color:var(--lav-d)}
+.app-vis::before{background:radial-gradient(circle at 40% 35%,#C9BFFF,#8B7CF6 70%);opacity:.55}
+.feat .ic{background:var(--lav-soft);color:var(--lav-d)}
+.ph-top{background:linear-gradient(135deg,#0B2463,#5B4BC9)}
+.journey::before{background:repeating-linear-gradient(90deg,var(--lav) 0 10px,transparent 10px 18px)}
+.journey .n{border-color:var(--lav-d);color:var(--lav-d)}
+.journey li:last-child .n{background:var(--lav-d)}
+.jr-note{color:var(--lav-d);background:var(--lav-soft)}
+.trk .steps .d i{background:var(--blue)}
+.ftr{background:#06122F}
+.permits{background:#06122F}
+.ftr .legal{border-color:rgba(255,255,255,.12)}
+
+/* ===== featured projects (home) ===== */
+.proj{background:#fff}
+.proj-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.pcard{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);display:grid;grid-template-rows:auto 1fr;transition:transform .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);box-shadow:0 30px 50px -36px rgba(11,36,99,.6)}
+.pimg{position:relative;aspect-ratio:4/3;max-width:100%;background:linear-gradient(150deg,#0B2463,#06122F);overflow:hidden;display:grid;place-items:center}
+.pimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pimg .ph{position:relative;display:grid;justify-items:center;gap:10px;color:#B9C4E6;font-size:.85rem;text-align:center;padding:16px}
+.pimg .ph svg{width:44px;height:44px;color:#8B7CF6;opacity:.9}
+.pimg::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 14px,transparent 14px 28px)}
+.pimg .sec-tag{position:absolute;top:14px;inset-inline-start:14px;background:rgba(255,255,255,.92);color:var(--blue-d);font-size:.78rem;font-weight:600;border-radius:999px;padding:3px 12px}
+.pbody{padding:22px 22px 24px;display:grid;gap:12px;align-content:start}
+.pbody h3{font-size:1.15rem;color:var(--blue-d);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.pending{font-family:var(--f-b);font-size:.72rem;font-weight:500;color:#8A6A00;background:#FFF6D9;border:1px dashed #E6C66B;border-radius:999px;padding:1px 10px}
+.pmeta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0}
+.pmeta div{background:var(--sky);border-radius:12px;padding:8px 12px}
+.pmeta dt{font-size:.72rem;color:var(--mut)}
+.pmeta dd{margin:0;font-weight:600;font-size:.9rem;color:var(--ink)}
+.pbody p{color:var(--mut);font-size:.95rem;line-height:1.8}
+.proj-note{text-align:center;color:var(--mut);font-size:.88rem;margin-top:22px}
+@media (max-width:960px){.proj-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.proj-grid{grid-template-columns:1fr}}
+
+/* ===== project stories (clients page) ===== */
+.stories{display:grid;gap:14px;max-width:960px;margin-inline:auto}
+.story{border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden}
+.story summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;padding:18px 22px}
+.story summary::-webkit-details-marker{display:none}
+.story .sic{width:52px;height:52px;border-radius:14px;background:var(--blue-d);color:#fff;display:grid;place-items:center}
+.story .sic svg{width:26px;height:26px}
+.story summary b{font-family:var(--f-d);font-size:1.1rem;color:var(--blue-d);display:block}
+.story summary small{color:var(--mut);font-size:.88rem}
+.story .tog{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);transition:transform .25s}
+.story[open] .tog{transform:rotate(45deg);background:var(--blue-d);color:#fff;border-color:var(--blue-d)}
+.story[open]{border-color:#C9D2EE;box-shadow:0 24px 40px -34px rgba(11,36,99,.6)}
+.story-b{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:0 22px 22px}
+.story-b div{background:var(--sky);border-radius:14px;padding:16px;display:grid;gap:6px;align-content:start}
+.story-b h4{font-family:var(--f-d);font-size:.95rem;color:var(--blue)}
+.story-b p{color:#3B4566;font-size:.93rem;line-height:1.8}
+.story-foot{padding:0 22px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--mut);font-size:.85rem}
+.story summary:focus-visible{outline:3px solid var(--orange);outline-offset:-3px;border-radius:20px}
+@media (max-width:760px){.story-b{grid-template-columns:1fr}.story summary{grid-template-columns:44px 1fr auto;padding:16px}.story .sic{width:44px;height:44px}}
+
+/* ===== conversion block (replaces newsletter) ===== */
+.convert{background:#06122F;padding-block:clamp(56px,7vw,88px) 32px}
+.conv-card{border-radius:28px;background:radial-gradient(60% 120% at 85% 20%,rgba(139,124,246,.28),rgba(11,36,99,0) 60%),linear-gradient(125deg,#0B2463,#163E96);color:#fff;padding:clamp(28px,4.5vw,60px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:28px;align-items:center;border:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden}
+.conv-card>*{position:relative;z-index:1;min-width:0}
+.conv-card .k{color:#C9BFFF;font-weight:600;font-size:.92rem}
+.conv-card h2{font-size:clamp(1.7rem,1.1rem + 1.9vw,2.5rem);font-weight:800;margin-top:8px}
+.conv-card p{color:#D9E0F5;margin-top:12px;max-width:54ch}
+.conv-list{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;padding:0;list-style:none;font-size:.92rem;color:#E4E9F8}
+.conv-list li{display:flex;gap:8px;align-items:center}
+.conv-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:#FF9A57}
+.conv-acts{display:grid;gap:14px;justify-items:start}
+.conv-acts .btn{min-height:58px;padding:0 34px;font-size:1.05rem}
+.conv-acts span{color:#B9C4E6;font-size:.92rem}
+.conv-acts b{color:#fff;user-select:all}
+@media (max-width:860px){.conv-card{grid-template-columns:1fr}}
+@media (max-width:560px){.conv-acts{justify-items:stretch}.conv-acts .btn{width:100%}}
 </style>
 </head>
 <body>
@@ -618,6 +758,25 @@ i[data-ic] svg{width:100%;height:100%}
   <div class="fact"><span class="ic"><i data-ic="tank"></i></span><b class="ltr">36,000</b><span>لتر، أكبر سعة صهريج في الأسطول</span></div>
 </div></section>
 
+<section class="sec proj" aria-labelledby="h-proj"><div class="wrap">
+  <div class="title split-t"><div><span class="k">مشاريع</span><h2 id="h-proj">مشاريع نفخر بتشغيلها</h2></div><a class="more" href="#clients">قصص المشاريع <span class="flip" aria-hidden="true">←</span></a></div>
+  <div class="proj-grid">
+    <article class="pcard"><div class="pimg"><span class="sec-tag">المشاريع والمقاولات</span><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><span>مساحة لصورة تشغيلية معتمدة من الموقع</span></div></div>
+      <div class="pbody"><h3>اسم المشروع <span class="pending">بانتظار الاعتماد</span></h3>
+        <dl class="pmeta"><div><dt>القطاع</dt><dd>المشاريع والمقاولات</dd></div><div><dt>نوع الخدمة</dt><dd>توريد ديزل ميداني</dd></div></dl>
+        <p>توريد مجدول لمولدات ومعدات الموقع، بتنسيق مسبق مع مسؤول الموقع وفاتورة إلكترونية لكل تسليم.</p></div></article>
+    <article class="pcard"><div class="pimg"><span class="sec-tag">الطرق والبنية التحتية</span><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><span>مساحة لصورة تشغيلية معتمدة من الموقع</span></div></div>
+      <div class="pbody"><h3>اسم المشروع <span class="pending">بانتظار الاعتماد</span></h3>
+        <dl class="pmeta"><div><dt>القطاع</dt><dd>الطرق والبنية التحتية</dd></div><div><dt>نوع الخدمة</dt><dd>نقل البيتومين وMC1</dd></div></dl>
+        <p>تحميل من مواقع أرامكو ونقل بشاحنات بخزانات مخصصة، وتسليم موثّق في موقع المشروع.</p></div></article>
+    <article class="pcard"><div class="pimg"><span class="sec-tag">الصناعة</span><div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.2"/></svg><span>مساحة لصورة تشغيلية معتمدة من الموقع</span></div></div>
+      <div class="pbody"><h3>اسم المشروع <span class="pending">بانتظار الاعتماد</span></h3>
+        <dl class="pmeta"><div><dt>القطاع</dt><dd>الصناعة</dd></div><div><dt>نوع الخدمة</dt><dd>عقد توريد منتظم</dd></div></dl>
+        <p>جدول توريد ثابت لخطوط الإنتاج والمولدات، مع متابعة الطلبات والفواتير من المنصة.</p></div></article>
+  </div>
+  <p class="proj-note">تُعرض هنا المشاريع المعتمدة بأسمائها وصورها التشغيلية الحقيقية بعد موافقة أصحابها.</p>
+</div></section>
+
 <section class="sec vmv" aria-labelledby="h-why"><div class="wrap">
   <div class="vmv-head"><div class="title" style="margin:0"><span class="k">لماذا فيول آب</span><h2 id="h-why">خمسة أسباب تجعلنا شريكك</h2></div><p>ثقة وتشغيل وتقنية ومتابعة وتوسّع، في عقد واحد. خمس ركائز تعمل معًا في كل عقد توريد.</p></div>
   <div class="why5" id="why5"></div>
@@ -640,10 +799,6 @@ i[data-ic] svg{width:100%;height:100%}
   <p class="center-link"><a class="more" href="#clients">العملاء والمشاريع <span class="flip" aria-hidden="true">←</span></a></p>
 </div></section>
 
-<section class="cta-band"><div class="wrap"><div class="cta-card">
-  <div><h2>هل عمليات الوقود لديك تعمل بأقصى كفاءتها؟</h2><p>صف لنا احتياجك، ويعود إليك فريق المبيعات بعرض يناسب الكمية والموقع والجدول.</p></div>
-  <div class="cta-acts"><a class="btn btn-w" href="#contact">اطلب عرضًا تشغيليًا</a><span class="cta-phone">أو اتصل <b class="ltr">920009088</b></span></div>
-</div></div></section>
 </div>
 
 <!-- =================================================================== ABOUT -->
@@ -747,6 +902,20 @@ i[data-ic] svg{width:100%;height:100%}
   <div class="title cl-t"><span class="k">مشاريع تم التوريد لها</span><h2 id="h-pr">مشاريع وطنية عملاقة… وصلها وقودنا</h2><p>توريد وقود ميداني لمواقع المشاريع الكبرى في المملكة، تنفّذها كبرى شركات المقاولات.</p></div>
   <div class="logos" data-logos="projects"></div>
 </div></section>
+<section class="sec" aria-labelledby="h-st"><div class="wrap">
+  <div class="title cl-t"><span class="k">قصص المشاريع</span><h2 id="h-st">كيف نشغّل التوريد في الميدان</h2><p>اختر قصة لترى التحدي والخدمة وطريقة التنفيذ.</p></div>
+  <div class="stories">
+    <details class="story"><summary><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></span><span><b>توريد ميداني لمشروع تطوير كبير</b><small>المشاريع والمقاولات · توريد الديزل</small></span><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="story-b"><div><h4>التحدي</h4><p>مواقع عمل واسعة تتغير نقاطها مع تقدم المشروع، ومولدات ومعدات ثقيلة تحتاج وقودًا يوميًا دون توقف.</p></div><div><h4>الخدمة</h4><p>توريد الديزل داخل مواقع المشروع بصهاريج بسعات تناسب كل نقطة استلام.</p></div><div><h4>طريقة التنفيذ</h4><p>جدول توريد متفق عليه مع إدارة الموقع، وتنسيق قبل كل وصول، وفاتورة إلكترونية تصدر مع كل تسليم عبر المنصة.</p></div></div>
+      <div class="story-foot"><span>قصة نموذجية تُستبدل بقصة العميل المعتمدة.</span><a class="more" href="#contact">اطلب حلًا مشابهًا <span class="flip" aria-hidden="true">←</span></a></div></details>
+    <details class="story"><summary><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21L10 3M20 21L14 3M12 7v2M12 13v2M12 19v2"/></svg></span><span><b>نقل البيتومين لمشروع طرق</b><small>الطرق والبنية التحتية · نقل الموارد</small></span><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="story-b"><div><h4>التحدي</h4><p>مواد تحتاج شاحنات مخصصة، وتوقيت يتماشى مع أعمال الرصف في الموقع.</p></div><div><h4>الخدمة</h4><p>نقل البيتومين وMC1 من مواقع أرامكو إلى موقع المشروع.</p></div><div><h4>طريقة التنفيذ</h4><p>تحميل من مواقع أرامكو، ثم نقل بشاحنات بخزانات مخصصة لهذه المواد، ثم تسليم موثّق في الموقع.</p></div></div>
+      <div class="story-foot"><span>قصة نموذجية تُستبدل بقصة العميل المعتمدة.</span><a class="more" href="#contact">اطلب حلًا مشابهًا <span class="flip" aria-hidden="true">←</span></a></div></details>
+    <details class="story"><summary><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4v-4l6 4V5h4v16z"/></svg></span><span><b>عقد توريد منتظم لمنشأة صناعية</b><small>الصناعة · عقود التوريد المنتظمة</small></span><span class="tog" aria-hidden="true">+</span></summary>
+      <div class="story-b"><div><h4>التحدي</h4><p>استهلاك مستمر لخطوط الإنتاج والمولدات، وأي انقطاع في الوقود يعني توقف العمل.</p></div><div><h4>الخدمة</h4><p>عقد توريد منتظم للديزل بجدول ثابت.</p></div><div><h4>طريقة التنفيذ</h4><p>مواعيد توريد ثابتة، ومتابعة الطلبات والفواتير من المنصة، وكشف شهري بالكميات لكل موقع.</p></div></div>
+      <div class="story-foot"><span>قصة نموذجية تُستبدل بقصة العميل المعتمدة.</span><a class="more" href="#contact">اطلب حلًا مشابهًا <span class="flip" aria-hidden="true">←</span></a></div></details>
+  </div>
+</div></section>
 </div>
 
 <!-- =================================================================== CONTACT -->
@@ -793,9 +962,10 @@ i[data-ic] svg{width:100%;height:100%}
 <section class="sec"><div class="wrap policy" id="pol-hse"></div></section>
 </div>
 
-<section class="news" aria-labelledby="h-news"><div class="wrap"><div class="news-card">
-  <div><h2 id="h-news">اشترك في نشرة فيول آب</h2><p>آخر تحديثات الخدمة والتغطية والمنصة، في رسالة شهرية واحدة.</p></div>
-  <form id="nf" novalidate><label class="sr" for="n-mail">البريد الإلكتروني</label><input id="n-mail" type="email" placeholder="name@company.com" autocomplete="email"><button class="btn btn-blue" type="submit">اشترك</button><p class="n-res" id="n-res" aria-live="polite"></p></form>
+<section class="convert" aria-labelledby="h-conv"><div class="wrap"><div class="conv-card">
+  <div><span class="k">فيول آب للأعمال</span><h2 id="h-conv">هل مشروعك جاهز لتوريد أكثر تحكمًا؟</h2><p>أخبرنا بالكمية والموقع والجدول، ويعود إليك فريق المبيعات بعرض تشغيلي واضح.</p>
+    <ul class="conv-list"><li>توريد في أربع مناطق</li><li>فريق تشغيل على مدار الساعة</li><li>فاتورة إلكترونية لكل توريد</li></ul></div>
+  <div class="conv-acts"><a class="btn btn-o" href="#contact">اطلب عرضًا تشغيليًا</a><span>أو اتصل على الرقم الموحد <b class="ltr">920009088</b></span></div>
 </div></div></section>
 <section class="permits" aria-labelledby="h-perm"><div class="wrap"><h2 id="h-perm">حاصلون على التصاريح من</h2><div class="plogos" data-logos="permits"></div></div></section>
 </main>
@@ -996,7 +1166,7 @@ $("q-ok").addEventListener("change",function(){check("q-ok")});
 $("qf").addEventListener("submit",function(ev){ev.preventDefault();var st=$("q-st");st.className="full status";st.textContent="";if($("q-web").value)return;
  var bad=ids.concat(["q-ok"]).filter(function(id){return !check(id)});if(bad.length){st.className="full status bad";st.textContent="راجع الحقول المحددة ثم أعد الإرسال.";$(bad[0]).focus();return}
  var b=$("q-sub");b.disabled=true;b.textContent="جارٍ الإرسال…";setTimeout(function(){b.disabled=false;b.textContent="أرسل الطلب";st.className="full status ok";st.textContent="اكتمل الطلب. هذه نسخة معاينة فلم يُرسل شيء؛ في النسخة النهائية يصل مباشرة إلى فريق المبيعات."},700)});
-$("nf").addEventListener("submit",function(ev){ev.preventDefault();var v=$("n-mail").value.trim();$("n-res").textContent=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?"تم. هذه نسخة معاينة فلم يُسجَّل البريد بعد.":"أدخل بريدًا إلكترونيًا صحيحًا مثل name@company.com."});
+
 
 /* ---------- dual date ---------- */
 try{var dt=new Date();$("today").textContent=new Intl.DateTimeFormat("ar-SA-u-ca-gregory-nu-latn",{weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(dt)+" · "+new Intl.DateTimeFormat("ar-SA-u-ca-islamic-umalqura-nu-latn",{day:"numeric",month:"long",year:"numeric"}).format(dt)}catch(x){}
