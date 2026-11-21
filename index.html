@@ -846,6 +846,20 @@ i[data-ic] svg{width:100%;height:100%}
 .wm-en{font-family:var(--f-m);font-size:.6rem;letter-spacing:.12em;color:var(--lav-d)}
 @media (max-width:1100px){.gp-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media (max-width:620px){.gp-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.gp-t small{display:none}}
+/* why-us: refined cards */
+.sec.vmv{padding-block:clamp(44px,5vw,64px)}
+.vmv-head{margin-bottom:22px}
+.why5{gap:12px;counter-reset:w}
+.why5 article{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 18px 20px;gap:6px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.why5 article::before{content:"";position:absolute;inset-inline:0;top:0;height:3px;background:linear-gradient(90deg,#0B2463,#8B7CF6);transform:scaleX(0);transform-origin:right;transition:transform .35s}
+.why5 article:hover{transform:translateY(-4px);box-shadow:0 22px 36px -28px rgba(11,36,99,.55);border-color:#D7DCF0}
+.why5 article:hover::before{transform:scaleX(1)}
+.why5 .blob{width:42px;height:42px;border-radius:12px;background:linear-gradient(140deg,#0B2463,#2A3D9A);color:#fff;box-shadow:0 10px 18px -10px rgba(91,75,201,.9)}
+.why5 .blob::before{display:none}
+.why5 .blob svg{width:21px;height:21px}
+.why5 small{position:absolute;top:10px;inset-inline-end:14px;font-family:var(--f-d);font-weight:800;font-size:2.2rem;line-height:1;color:transparent;-webkit-text-stroke:1px #C3C9E6;font-family:var(--f-b)!important}
+.why5 h3{font-size:1.05rem;margin-top:8px}
+.why5 p{font-size:.86rem;line-height:1.7}
 
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
