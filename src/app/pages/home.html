@@ -24,7 +24,7 @@
   <div class="slide s3" [class.on]="s.cur() === 2" id="sl-2" role="group" aria-roledescription="slide" [attr.aria-label]="i.t('home.31')">
     <div class="wrap">
       <div class="s-in"><span class="s-tag">{{ i.t('header.8') }}</span><h2>{{ i.t('home.32') }}<span>{{ i.t('home.33') }}</span></h2><p>{{ i.t('home.34') }}</p><div class="s-acts"><a class="btn btn-o" [routerLink]="i.link('coverage')">{{ i.t('home.35') }}</a></div></div>
-      <div class="s-vis" id="heroMap" [faMap]="null"></div>
+      @defer (hydrate on idle) {<div class="s-vis" id="heroMap" [faMap]="null"></div>}
     </div>
   </div>
   <div class="ticker" [attr.aria-label]="i.t('home.36')"><div class="tk-track" id="ticker" faTicker></div></div>
@@ -42,11 +42,14 @@
   <a [routerLink]="i.link('contact')"><i data-ic="phone"></i><span><b>{{ i.t('header.10') }}</b><small>{{ i.t('home.52') }}</small></span></a>
 </div></nav>
 
+@defer (hydrate on viewport) {
 <section class="sec" aria-labelledby="h-svc"><div class="wrap">
   <div class="title split-t"><div><span class="k">{{ i.t('home.53') }}</span><h2 id="h-svc">{{ i.t('home.54') }}</h2></div><a class="more" [routerLink]="i.link('services')">{{ i.t('home.55') }} <span class="flip" aria-hidden="true">←</span></a></div>
   <div class="svc-wrap" faSvcTabs></div>
 </div></section>
 
+}
+@defer (hydrate on viewport) {
 <div class="band"><div class="wrap"><b class="m">{{ i.t('home.57') }}</b><span>{{ i.t('home.58') }}</span></div></div>
 <section class="facts" [attr.aria-label]="i.t('home.59')"><div class="wrap">
   <div class="fact"><span class="ic"><i data-ic="truck"></i></span><b class="ltr">{{ i.t('home.60') }}</b><span>{{ i.t('home.61') }}</span></div>
@@ -55,16 +58,22 @@
   <div class="fact"><span class="ic"><i data-ic="tank"></i></span><b class="ltr">36,000</b><span>{{ i.t('home.64') }}</span></div>
 </div></section>
 
+}
+@defer (hydrate on viewport) {
 <section class="sec proj" aria-labelledby="h-proj"><div class="wrap">
   <div class="title split-t"><div><span class="k">{{ i.t('home.65') }}</span><h2 id="h-proj">{{ i.t('home.66') }}</h2><p>{{ i.t('home.67') }}</p></div><a class="more" [routerLink]="i.link('clients')">{{ i.t('home.68') }} <span class="flip" aria-hidden="true">←</span></a></div>
   <div class="gp-grid"><article class="gp"><div class="gp-logo"><img src="assets/logos/p-neom.webp" [alt]="i.t('home.69')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.69') }}</b><small>{{ i.t('home.70') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-redsea.webp" [alt]="i.t('home.71')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.71') }}</b><small>{{ i.t('home.72') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-qiddiya.webp" [alt]="i.t('home.73')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.73') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-diriyah.webp" [alt]="i.t('home.75')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.75') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-kingsalmanpark.webp" [alt]="i.t('home.76')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.76') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-newmurabba.webp" [alt]="i.t('home.77')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.77') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-ksia.webp" [alt]="i.t('home.78')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.78') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-roshn.webp" [alt]="i.t('home.79')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.79') }}</b><small>{{ i.t('home.80') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-amaala.webp" [alt]="i.t('home.81')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.81') }}</b><small>{{ i.t('home.72') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-alula.webp" [alt]="i.t('home.82')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.82') }}</b><small>{{ i.t('home.82') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-sportsboulevard.webp" [alt]="i.t('home.83')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.83') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-jeddahcentral.webp" [alt]="i.t('home.84')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.84') }}</b><small>{{ i.t('home.85') }}</small></div></article><article class="gp"><div class="gp-logo txt" aria-hidden="true"><span class="wm-ar">مركز الملك عبدالله المالي</span><span class="wm-en">KAFD</span></div><div class="gp-t"><b>{{ i.t('home.86') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo txt" aria-hidden="true"><span class="wm-ar">مترو الرياض</span><span class="wm-en">RIYADH METRO</span></div><div class="gp-t"><b>{{ i.t('home.87') }}</b><small>{{ i.t('home.74') }}</small></div></article></div>
 </div></section>
 
+}
+@defer (hydrate on viewport) {
 <section class="sec vmv" aria-labelledby="h-why"><div class="wrap">
   <div class="vmv-head"><div class="title" style="margin:0"><span class="k">{{ i.t('home.88') }}</span><h2 id="h-why">{{ i.t('home.89') }}</h2></div><p>{{ i.t('home.90') }}</p></div>
   <div class="why5" id="why5" faWhy></div>
 </div></section>
 
+}
+@defer (hydrate on viewport) {
 <section class="sec app" aria-labelledby="h-app"><div class="wrap app-grid">
   <div>
     <div class="title" style="margin-bottom:18px"><span class="k">{{ i.t('home.91') }}</span></div>
@@ -76,12 +85,17 @@
   <div class="app-vis" data-phone></div>
 </div></section>
 
+}
+@defer (hydrate on viewport) {
 <section class="sec clients" aria-labelledby="h-cl"><div class="wrap">
   <div class="title cl-t"><span class="k">{{ i.t('home.97') }}</span><h2 id="h-cl">{{ i.t('home.98') }}</h2><p>{{ i.t('home.99') }}</p></div>
   <div class="marq" [attr.aria-label]="i.t('home.100')"><div class="marq-track" id="clientMarquee" faMarquee></div></div>
   <p class="center-link"><a class="more" [routerLink]="i.link('clients')">{{ i.t('home.68') }} <span class="flip" aria-hidden="true">←</span></a></p>
 </div></section>
 
+}
+@defer (hydrate on viewport) {
 <fa-ops-room />
+}
 
 </div>
