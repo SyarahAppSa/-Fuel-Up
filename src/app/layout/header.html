@@ -1,3 +1,4 @@
+@defer (hydrate on interaction) {
 <header class="hdr"><div class="wrap"><div class="hcard">
   <a class="brand" [routerLink]="i.link('home')"><img src="assets/logo-white.webp" width="46" height="46" alt=""><span><b>{{ i.t('header.1') }}</b><small>{{ i.t('header.2') }}</small></span></a>
   <nav class="nav" id="nav" [class.open]="open()" [attr.aria-label]="i.t('header.3')">
@@ -7,3 +8,4 @@
   <a class="btn btn-o" [routerLink]="i.link('contact')">{{ i.t('header.11') }}</a>
   <button class="burger" id="burger" #burger type="button" [attr.aria-expanded]="open()" aria-controls="nav" [attr.aria-label]="i.t('header.12')" (click)="open.set(!open())">{{ open() ? '✕' : '☰' }}</button>
 </div></div></header>
+}
