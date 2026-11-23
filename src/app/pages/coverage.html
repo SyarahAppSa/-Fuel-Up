@@ -1,0 +1,21 @@
+<div class="page" data-page="coverage">
+<section class="phero"><div class="wrap"><p class="crumbs"><a [routerLink]="i.link('home')">{{ i.t('header.4') }}</a> {{ i.t('coverage.1') }}</p><h1>{{ i.t('coverage.2') }}</h1><p>{{ i.t('coverage.3') }}</p></div></section>
+<section class="sec" [attr.aria-label]="i.t('coverage.4')"><div class="wrap">
+  <div class="cov">
+    <div class="cov-map" id="covMap" [faMap]="regSel()"></div>
+    <div>
+      <div class="regions" id="regions">
+        @for (k of regKeys; track k) {
+          <button class="reg" type="button" [attr.data-r]="k" [attr.aria-pressed]="regSel() === k" (click)="toggleRegion(k)"><i [style.background]="i.c().regionColors[k]"></i><b>{{ i.c().regions[k][0] }}{{ i.ui().map.hubPrefix }}{{ i.c().hubs[k] }}</b><span>{{ i.c().regions[k][1] }}</span></button>
+        }
+      </div>
+      <div class="check"><label for="city">{{ i.t('coverage.5') }}</label><select id="city" (change)="pickCity($any($event.target).value)">
+        <option value="">{{ i.ui().map.selectCity }}</option>
+        @for (x of cities(); track x[0]) { <option [value]="x[1]">{{ x[0] }}</option> }
+        <option value="x">{{ i.ui().map.otherCity }}</option>
+      </select><p class="res-c" [class.ok]="cityRes()?.ok === true" [class.no]="cityRes()?.ok === false" id="cityRes" aria-live="polite">{{ cityRes()?.text }}</p></div>
+    </div>
+  </div>
+  <p class="cov-note">{{ i.t('coverage.6') }} <a [routerLink]="i.link('contact')">{{ i.t('header.10') }}</a></p>
+</div></section>
+</div>

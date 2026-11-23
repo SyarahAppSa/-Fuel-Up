@@ -1,0 +1,107 @@
+<section class="opsroom" id="opsroom" aria-labelledby="h-ops"><div class="wrap">
+  <div class="ops-head">
+    <div><span class="ops-k">{{ i.t('home.101') }}</span><h2 id="h-ops">{{ i.t('home.102') }}</h2><p>{{ i.t('home.103') }}</p></div>
+    <span class="ops-demo">{{ i.t('home.20') }}</span>
+  </div>
+
+  <div class="ops-sect" role="tablist" [attr.aria-label]="i.t('home.104')" id="opsSect">
+    @for (k of keys; track k) {
+      <button type="button" role="tab" [id]="'ops-t-' + k" aria-controls="opsStage" [attr.aria-selected]="k === sec()" [attr.tabindex]="k === sec() ? 0 : -1"
+        [attr.data-s]="k" (click)="pickSector(k)" (keydown)="sectorKey($event)"><fa-icon set="ops" [name]="ops().sectors[k].ic" />{{ ops().sectors[k].n }}</button>
+    }
+  </div>
+
+  <div class="ops-console">
+    <ol class="ops-steps" id="opsSteps" [attr.aria-label]="i.t('home.105')">
+      <span class="bar" [style.width]="'calc((100% - 100%/6) * ' + st() / 5 + ')'" aria-hidden="true"></span>
+      @for (x of ops().stages; track x[0]; let n = $index) {
+        <li [class.done]="n < st()"><button type="button" [attr.data-i]="n" [attr.aria-current]="n === st() ? 'step' : null"
+          [attr.aria-label]="ui().stageAria(n + 1, x[1])" (click)="goStep(n, true)"><span class="dot"><fa-icon set="ops" [name]="n < st() ? 'check' : x[0]" [width]="n < st() ? 2.2 : 1.7" /></span><span class="lbl">{{ x[1] }}</span></button></li>
+      }
+    </ol>
+
+    <div class="ops-stage" id="opsStage" role="tabpanel" aria-live="polite" [attr.aria-labelledby]="'ops-t-' + sec()">
+      <div class="st-info" id="stInfo">
+        <span class="st-no">{{ ui().stageNo(st() + 1, sector().n) }}</span>
+        <h3>{{ stage()[1] }}</h3>
+        <p>{{ sector().t[st()] }}</p>
+        <dl class="st-meta"><div><dt>{{ ui().owner }}</dt><dd>{{ stage()[2] }}</dd></div><div><dt>{{ ui().recorded }}</dt><dd>{{ stage()[3] }}</dd></div></dl>
+        <span class="st-status"><i></i>{{ ops().status[st()] }}</span>
+      </div>
+
+      <div class="st-vis has3d" id="stVis" [class.show-img]="view() === 'img' || no3d()" [class.no3d]="no3d()">
+        <div class="sim3d" id="sim3d" #simHost>
+          <div class="sim-hud" aria-hidden="true">
+            <ol id="sim-steps" hidden></ol><b id="sim-stTitle"></b><span id="sim-stText" hidden></span>
+            <div id="sim-photos" hidden><span></span><span></span><span></span><span></span><span id="sim-inv"></span></div>
+            <div class="sim-g"><small><span>{{ ui().tankLoad }}</span><span id="sim-lvl">0{{ ui().unit }}</span></small><div class="bar"><i id="sim-lvlBar"></i></div></div>
+          </div>
+          <span class="tag" id="sim-tagA">{{ ui().tagA }}</span><span class="tag pj" id="sim-tagB">{{ ui().tagB }}</span>
+          <span class="sim-badge">{{ ui().badge }}</span>
+        </div>
+
+        <div class="st-ov" id="stOv">
+          @switch (st()) {
+            @case (0) {
+              <div class="slip"><div class="slip-card" role="img" [attr.aria-label]="ui().slipAria">
+                <div class="slip-h"><b>{{ ui().slipTitle }}</b><span>{{ ui().illustrative }}</span></div>
+                <div class="slip-row"><span>{{ ui().sector }}</span><span>{{ sector().n }}</span></div>
+                <div class="slip-row"><span>{{ ui().fuel }}</span><span>{{ sector().fuel }}</span></div>
+                <div class="slip-row"><span>{{ ui().site }}</span><span>{{ sector().site }}</span></div>
+                <div class="slip-row"><span>{{ ui().qty }}</span><span>{{ ui().qtyValue }}</span></div>
+                <div class="slip-btn">{{ ui().submit }}</div>
+              </div></div>
+            }
+            @case (1) {
+              <img src="/assets/photos/fleet-yard.webp" [alt]="ui().st1[0]" loading="lazy"><div class="cap"><span>{{ ui().st1[1] }}</span><small>{{ ui().illustrativeImage }}</small></div>
+            }
+            @case (2) {
+              <img src="/assets/photos/aramco-tankers.webp" [alt]="ui().st2[0]" loading="lazy"><div class="cap"><span>{{ ui().st2[1] }}</span><small>{{ ui().illustrativeImage }}</small></div>
+            }
+            @case (3) {
+              <div class="route" role="img" [attr.aria-label]="ui().routeAria">
+                <svg viewBox="0 0 600 120" aria-hidden="true"><g [attr.transform]="i.dir() === 'rtl' ? 'translate(600 0) scale(-1 1)' : null">
+                  <path d="M20 60 C 140 10, 220 110, 340 60 S 520 20, 580 60" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="6" stroke-linecap="round"/>
+                  <path d="M20 60 C 140 10, 220 110, 340 60" fill="none" stroke="#8B7CF6" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="20" cy="60" r="9" fill="#8B7CF6"/><circle cx="580" cy="60" r="16" fill="#F37421" opacity=".2"/><circle cx="580" cy="60" r="8" fill="#F37421"/>
+                  <g class="r-dot"><circle r="13" fill="#fff" opacity=".15"/><circle r="6" fill="#fff"/></g>
+                </g></svg>
+                <div class="route-lbl"><span><b>{{ ui().loadingPoint }}</b>{{ ui().dispatched }}</span><span style="text-align:end"><b>{{ sector().site }}</b>{{ ui().awaiting }}</span></div>
+                <span class="route-eta"><i></i>{{ ui().eta }}</span>
+              </div>
+            }
+            @case (4) {
+              <img [src]="'/assets/photos/' + sector().photo + '.webp'" [alt]="ui().st4Alt" loading="lazy"><div class="cap"><span>{{ ui().st4Cap(sector().site) }}</span><small>{{ ui().illustrativeImage }}</small></div>
+            }
+            @default {
+              <div class="proto">
+                <div class="proto-h"><b>{{ ui().protoTitle }}</b><span>{{ ui().protoSub }}</span></div>
+                <div class="proto-grid">
+                  @for (p of shots; track p; let n = $index) {
+                    <figure class="shot4" style="margin:0"><img [src]="'/assets/photos/' + p + '.webp'" [alt]="ui().shots[n]" loading="lazy">
+                      <span class="vf" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                      <span class="ok" aria-hidden="true"><fa-icon set="ops" name="check" [width]="2.4" /></span>
+                      <figcaption class="sl"><span>{{ ui().shots[n] }}</span><span class="no">0{{ n + 1 }}</span></figcaption></figure>
+                  }
+                </div>
+                <div class="proto-f"><span>{{ ui().protoClose }}</span><span class="einv"><fa-icon set="ops" name="check" [width]="2.4" />{{ ui().einv }}</span></div>
+              </div>
+            }
+          }
+        </div>
+
+        <div class="vis-tog" role="group" [attr.aria-label]="ui().viewAria">
+          <button type="button" data-v="3d" [attr.aria-pressed]="view() === '3d'" (click)="setView('3d')">{{ ui().view3d }}</button>
+          <button type="button" data-v="img" [attr.aria-pressed]="view() === 'img'" (click)="setView('img')">{{ ui().viewImg }}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ops-ctrl">
+      <button type="button" class="ops-nav" id="opsPrev" [attr.aria-label]="i.t('home.106')" [disabled]="st() === 0" (click)="prev()">→</button>
+      <button type="button" class="ops-play" id="opsPlay" (click)="togglePlay()"><span aria-hidden="true">{{ playing() ? '❚❚' : '▶' }}</span> {{ playing() ? ui().stop : ui().play }}</button>
+      <button type="button" class="ops-nav" id="opsNext" [attr.aria-label]="i.t('home.108')" [disabled]="st() === 5" (click)="next()">←</button>
+    </div>
+  </div>
+  <div class="ops-end"><p>{{ i.t('home.109') }} <span>{{ i.t('home.110') }}</span></p></div>
+</div></section>

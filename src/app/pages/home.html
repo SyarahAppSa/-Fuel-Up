@@ -1,0 +1,87 @@
+<div class="page" data-page="home">
+<section class="slider" faSlider #s="slider" aria-roledescription="carousel" [attr.aria-label]="i.t('home.1')">
+  <div class="slide s1" [class.on]="s.cur() === 0" id="sl-0" role="group" aria-roledescription="slide" [attr.aria-label]="i.t('home.2')">
+    <div class="wrap">
+      <div class="s-in"><span class="s-tag">{{ i.t('home.3') }}</span><h1>{{ i.t('home.4') }}<span>{{ i.t('home.5') }}</span></h1><p>{{ i.t('home.6') }}</p><div class="s-acts"><a class="btn btn-o" [routerLink]="i.link('contact')">{{ i.t('home.7') }}</a><a class="btn btn-line" [routerLink]="i.link('services')">{{ i.t('home.8') }}</a></div></div>
+      <div class="s-vis"><div class="trk" role="img" [attr.aria-label]="i.t('home.9')">
+        <div class="trk-h"><b>{{ i.t('home.10') }}</b><span class="live"><i></i>{{ i.t('home.11') }}</span></div>
+        <svg class="trk-map" viewBox="0 0 520 190" aria-hidden="true"><rect width="520" height="190" fill="#EEF2FB"/><g stroke="#DCE3F3" stroke-width="10" stroke-linecap="round"><path d="M0 60H520M0 140H520M120 0V190M300 0V190M430 0V190"/></g><path d="M40 160 L120 160 Q130 160 130 150 L130 70 Q130 60 140 60 L290 60 Q300 60 300 70 L300 130 Q300 140 310 140 L470 140" fill="none" stroke="#163E96" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M220 60 L290 60 Q300 60 300 70 L300 130 Q300 140 310 140 L470 140" fill="none" stroke="#F1F4FB" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/><circle cx="40" cy="160" r="9" fill="#163E96"/><circle cx="470" cy="140" r="14" fill="#F37421" opacity=".2"/><circle cx="470" cy="140" r="8" fill="#F37421"/><g transform="translate(220 60)"><rect x="-16" y="-11" width="32" height="22" rx="6" fill="#F37421"/><rect x="-10" y="-5" width="14" height="10" rx="3" fill="#fff"/></g></svg>
+        <div class="trk-b">
+          <div class="trk-row"><span>{{ i.t('home.12') }}</span><b class="m ltr">FA-1187</b></div>
+          <div class="trk-row"><span>{{ i.t('home.13') }}</span><span class="pill p-o">{{ i.t('home.14') }}</span></div>
+          <div class="steps"><div class="d"><i></i>{{ i.t('home.15') }}</div><div class="d"><i></i>{{ i.t('home.16') }}</div><div class="d"><i></i>{{ i.t('home.17') }}</div><div class="n"><i></i>{{ i.t('home.18') }}</div><div><i></i>{{ i.t('home.19') }}</div></div>
+          <div class="trk-row"><span class="demo">{{ i.t('home.20') }}</span><span style="color:var(--mut);font-size:.82rem">{{ i.t('home.21') }}</span></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+  <div class="slide s2" [class.on]="s.cur() === 1" id="sl-1" role="group" aria-roledescription="slide" [attr.aria-label]="i.t('home.22')">
+    <div class="wrap">
+      <div class="s-in"><span class="s-tag">{{ i.t('home.23') }}</span><h2>{{ i.t('home.24') }}<span>{{ i.t('home.25') }}</span></h2><p>{{ i.t('home.26') }}</p><div class="s-acts"><a class="btn btn-w" [routerLink]="i.link('services')">{{ i.t('home.27') }}</a></div></div>
+      <div class="s-vis frames" aria-hidden="true"><span class="fw">{{ i.t('home.28') }}</span><span class="fw alt">{{ i.t('home.29') }}</span><span class="fw"><span class="ltr">MC1 · MC2</span></span><span class="fw small">{{ i.t('home.30') }}</span></div>
+    </div>
+  </div>
+  <div class="slide s3" [class.on]="s.cur() === 2" id="sl-2" role="group" aria-roledescription="slide" [attr.aria-label]="i.t('home.31')">
+    <div class="wrap">
+      <div class="s-in"><span class="s-tag">{{ i.t('header.8') }}</span><h2>{{ i.t('home.32') }}<span>{{ i.t('home.33') }}</span></h2><p>{{ i.t('home.34') }}</p><div class="s-acts"><a class="btn btn-o" [routerLink]="i.link('coverage')">{{ i.t('home.35') }}</a></div></div>
+      <div class="s-vis" id="heroMap" [faMap]="null"></div>
+    </div>
+  </div>
+  <div class="ticker" [attr.aria-label]="i.t('home.36')"><div class="tk-track" id="ticker" faTicker></div></div>
+  <div class="s-ctrl"><div class="wrap">
+    <div class="dots" role="group" [attr.aria-label]="i.t('home.37')"><button type="button" [attr.aria-current]="s.cur() === 0" (click)="s.dot(0)" [attr.aria-label]="i.t('home.38')"></button><button type="button" [attr.aria-current]="s.cur() === 1" (click)="s.dot(1)" [attr.aria-label]="i.t('home.39')"></button><button type="button" [attr.aria-current]="s.cur() === 2" (click)="s.dot(2)" [attr.aria-label]="i.t('home.40')"></button></div>
+    <div class="sp"><button class="arr" type="button" id="prev" [attr.aria-label]="i.t('home.41')" (click)="s.prev()">→</button><button class="arr" type="button" id="pause" [attr.aria-label]="s.paused() ? i.ui().slider.play : i.ui().slider.pause" (click)="s.toggle()">{{ s.paused() ? '▶' : '❚❚' }}</button><button class="arr" type="button" id="next" [attr.aria-label]="i.t('home.43')" (click)="s.next()">←</button></div>
+  </div></div>
+</section>
+
+<nav class="quick" [attr.aria-label]="i.t('home.44')"><div class="wrap">
+  <a [routerLink]="i.link('contact')"><i data-ic="order"></i><span><b>{{ i.t('home.45') }}</b><small>{{ i.t('home.46') }}</small></span></a>
+  <a [routerLink]="i.link('platform')"><i data-ic="route"></i><span><b>{{ i.t('home.10') }}</b><small>{{ i.t('home.47') }}</small></span></a>
+  <a [routerLink]="i.link('platform')"><i data-ic="invoice"></i><span><b>{{ i.t('home.48') }}</b><small>{{ i.t('home.49') }}</small></span></a>
+  <a [routerLink]="i.link('coverage')"><i data-ic="pin"></i><span><b>{{ i.t('home.50') }}</b><small>{{ i.t('home.51') }}</small></span></a>
+  <a [routerLink]="i.link('contact')"><i data-ic="phone"></i><span><b>{{ i.t('header.10') }}</b><small>{{ i.t('home.52') }}</small></span></a>
+</div></nav>
+
+<section class="sec" aria-labelledby="h-svc"><div class="wrap">
+  <div class="title split-t"><div><span class="k">{{ i.t('home.53') }}</span><h2 id="h-svc">{{ i.t('home.54') }}</h2></div><a class="more" [routerLink]="i.link('services')">{{ i.t('home.55') }} <span class="flip" aria-hidden="true">←</span></a></div>
+  <div class="svc-wrap" faSvcTabs></div>
+</div></section>
+
+<div class="band"><div class="wrap"><b class="m">{{ i.t('home.57') }}</b><span>{{ i.t('home.58') }}</span></div></div>
+<section class="facts" [attr.aria-label]="i.t('home.59')"><div class="wrap">
+  <div class="fact"><span class="ic"><i data-ic="truck"></i></span><b class="ltr">{{ i.t('home.60') }}</b><span>{{ i.t('home.61') }}</span></div>
+  <div class="fact"><span class="ic"><i data-ic="clock"></i></span><b class="ltr">24/7</b><span>{{ i.t('home.62') }}</span></div>
+  <div class="fact"><span class="ic"><i data-ic="pin"></i></span><b class="ltr">04</b><span>{{ i.t('home.63') }}</span></div>
+  <div class="fact"><span class="ic"><i data-ic="tank"></i></span><b class="ltr">36,000</b><span>{{ i.t('home.64') }}</span></div>
+</div></section>
+
+<section class="sec proj" aria-labelledby="h-proj"><div class="wrap">
+  <div class="title split-t"><div><span class="k">{{ i.t('home.65') }}</span><h2 id="h-proj">{{ i.t('home.66') }}</h2><p>{{ i.t('home.67') }}</p></div><a class="more" [routerLink]="i.link('clients')">{{ i.t('home.68') }} <span class="flip" aria-hidden="true">←</span></a></div>
+  <div class="gp-grid"><article class="gp"><div class="gp-logo"><img src="assets/logos/p-neom.webp" [alt]="i.t('home.69')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.69') }}</b><small>{{ i.t('home.70') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-redsea.webp" [alt]="i.t('home.71')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.71') }}</b><small>{{ i.t('home.72') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-qiddiya.webp" [alt]="i.t('home.73')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.73') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-diriyah.webp" [alt]="i.t('home.75')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.75') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-kingsalmanpark.webp" [alt]="i.t('home.76')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.76') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-newmurabba.webp" [alt]="i.t('home.77')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.77') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-ksia.webp" [alt]="i.t('home.78')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.78') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-roshn.webp" [alt]="i.t('home.79')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.79') }}</b><small>{{ i.t('home.80') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-amaala.webp" [alt]="i.t('home.81')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.81') }}</b><small>{{ i.t('home.72') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-alula.webp" [alt]="i.t('home.82')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.82') }}</b><small>{{ i.t('home.82') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-sportsboulevard.webp" [alt]="i.t('home.83')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.83') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo"><img src="assets/logos/p-jeddahcentral.webp" [alt]="i.t('home.84')" loading="lazy"></div><div class="gp-t"><b>{{ i.t('home.84') }}</b><small>{{ i.t('home.85') }}</small></div></article><article class="gp"><div class="gp-logo txt" aria-hidden="true"><span class="wm-ar">مركز الملك عبدالله المالي</span><span class="wm-en">KAFD</span></div><div class="gp-t"><b>{{ i.t('home.86') }}</b><small>{{ i.t('home.74') }}</small></div></article><article class="gp"><div class="gp-logo txt" aria-hidden="true"><span class="wm-ar">مترو الرياض</span><span class="wm-en">RIYADH METRO</span></div><div class="gp-t"><b>{{ i.t('home.87') }}</b><small>{{ i.t('home.74') }}</small></div></article></div>
+</div></section>
+
+<section class="sec vmv" aria-labelledby="h-why"><div class="wrap">
+  <div class="vmv-head"><div class="title" style="margin:0"><span class="k">{{ i.t('home.88') }}</span><h2 id="h-why">{{ i.t('home.89') }}</h2></div><p>{{ i.t('home.90') }}</p></div>
+  <div class="why5" id="why5" faWhy></div>
+</div></section>
+
+<section class="sec app" aria-labelledby="h-app"><div class="wrap app-grid">
+  <div>
+    <div class="title" style="margin-bottom:18px"><span class="k">{{ i.t('home.91') }}</span></div>
+    <h2 id="h-app">{{ i.t('home.92') }}<span> {{ i.t('home.93') }}</span></h2>
+    <p class="app-p">{{ i.t('home.94') }}</p>
+    <div class="feat" id="featHome" faFeat></div>
+    <div class="app-acts"><a class="btn btn-o" [routerLink]="i.link('platform')">{{ i.t('home.95') }}</a><a class="btn btn-blue" [routerLink]="i.link('contact')">{{ i.t('home.96') }}</a></div>
+  </div>
+  <div class="app-vis" data-phone></div>
+</div></section>
+
+<section class="sec clients" aria-labelledby="h-cl"><div class="wrap">
+  <div class="title cl-t"><span class="k">{{ i.t('home.97') }}</span><h2 id="h-cl">{{ i.t('home.98') }}</h2><p>{{ i.t('home.99') }}</p></div>
+  <div class="marq" [attr.aria-label]="i.t('home.100')"><div class="marq-track" id="clientMarquee" faMarquee></div></div>
+  <p class="center-link"><a class="more" [routerLink]="i.link('clients')">{{ i.t('home.68') }} <span class="flip" aria-hidden="true">←</span></a></p>
+</div></section>
+
+<fa-ops-room />
+
+</div>

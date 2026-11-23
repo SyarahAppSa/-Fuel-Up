@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://fuelapp.sa/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/about"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/about"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/services"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/services"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/services"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/services"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/platform</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/platform"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/platform</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/platform"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/platform"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/platform"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/coverage</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/coverage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/coverage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/coverage"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/coverage</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/coverage"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/coverage"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/coverage"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/clients</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/clients"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/clients"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/clients"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/clients</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/clients"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/clients"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/clients"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/contact"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/contact"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/privacy"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/privacy"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/terms"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/terms"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/hse</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/hse"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/hse"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/hse"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://fuelapp.sa/en/hse</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://fuelapp.sa/hse"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/hse"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/hse"/>
+    <priority>0.3</priority>
+  </url>
+</urlset>
