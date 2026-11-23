@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: fuelapp-leads-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: "true"
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://fuelapp-website-preview.onrender.com,https://fuelapp.sa,https://www.fuelapp.sa
+      - key: MS_TABLE_NAME
+        value: Website_Leads
+      - key: MS_TENANT_ID
+        sync: false
+      - key: MS_CLIENT_ID
+        sync: false
+      - key: MS_CLIENT_SECRET
+        sync: false
+      - key: MS_DRIVE_ID
+        sync: false
+      - key: MS_ITEM_ID
+        sync: false

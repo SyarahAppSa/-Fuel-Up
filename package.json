@@ -1,0 +1,14 @@
+{
+  "name": "fuelapp-leads-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fuel App website forms → Excel Online (Microsoft Graph)",
+  "main": "server.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run.js",
+    "find-file": "node tools/find-file.js",
+    "test-row": "node tools/test-row.js"
+  }
+}
