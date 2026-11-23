@@ -34,13 +34,13 @@
   </div></div>
 </section>
 
-<nav class="quick" [attr.aria-label]="i.t('home.44')"><div class="wrap">
+@defer (hydrate on interaction) {<nav class="quick" [attr.aria-label]="i.t('home.44')"><div class="wrap">
   <a [routerLink]="i.link('contact')"><i data-ic="order"></i><span><b>{{ i.t('home.45') }}</b><small>{{ i.t('home.46') }}</small></span></a>
   <a [routerLink]="i.link('platform')"><i data-ic="route"></i><span><b>{{ i.t('home.10') }}</b><small>{{ i.t('home.47') }}</small></span></a>
   <a [routerLink]="i.link('platform')"><i data-ic="invoice"></i><span><b>{{ i.t('home.48') }}</b><small>{{ i.t('home.49') }}</small></span></a>
   <a [routerLink]="i.link('coverage')"><i data-ic="pin"></i><span><b>{{ i.t('home.50') }}</b><small>{{ i.t('home.51') }}</small></span></a>
   <a [routerLink]="i.link('contact')"><i data-ic="phone"></i><span><b>{{ i.t('header.10') }}</b><small>{{ i.t('home.52') }}</small></span></a>
-</div></nav>
+</div></nav>}
 
 @defer (hydrate on viewport) {
 <section class="sec" aria-labelledby="h-svc"><div class="wrap">

@@ -1,12 +1,9 @@
 import { DOCUMENT, Injectable, computed, effect, inject, signal } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { STRINGS_AR } from '../i18n/strings.ar';
-import { STRINGS_EN } from '../i18n/strings.en';
-import { UI_AR, UI_EN, UiStrings } from '../i18n/ui';
-import { CONTENT_AR } from '../data/content.ar';
-import { CONTENT_EN } from '../data/content.en';
+import type { UiStrings } from '../i18n/ui';
 import type { SiteContent } from '../data/content.types';
+import { LangPack, PACK_LOADERS } from '../i18n/pack';
 
 export type Lang = 'ar' | 'en';
 export const PAGES = ['home', 'about', 'services', 'platform', 'coverage', 'clients', 'contact', 'privacy', 'terms', 'hse'] as const;
@@ -17,6 +14,8 @@ export function pathFor(lang: Lang, page: Page): string {
   const base = lang === 'en' ? '/en' : '';
   return page === 'home' ? base || '/' : `${base}/${page}`;
 }
+
+export function langOf(url: string): Lang { return parse(url).lang; }
 
 function parse(url: string): { lang: Lang; page: Page } {
   const clean = url.split(/[?#]/)[0].replace(/\/+$/, '');
@@ -37,9 +36,11 @@ export class I18n {
   /** Which call-to-action brought the visitor to the contact form */
   readonly formIntent = signal<'quote' | 'contact'>('quote');
 
-  readonly strings = computed(() => (this.lang() === 'en' ? STRINGS_EN : STRINGS_AR));
-  readonly ui = computed<UiStrings>(() => (this.lang() === 'en' ? UI_EN : UI_AR));
-  readonly c = computed<SiteContent>(() => (this.lang() === 'en' ? CONTENT_EN : CONTENT_AR));
+  private packs = signal<Partial<Record<Lang, LangPack>>>({});
+  private pack = computed(() => this.packs()[this.lang()] ?? this.packs()[this.other()]!);
+  readonly strings = computed(() => this.pack().strings);
+  readonly ui = computed<UiStrings>(() => this.pack().ui);
+  readonly c = computed<SiteContent>(() => this.pack().content);
   readonly dir = computed(() => (this.lang() === 'en' ? 'ltr' : 'rtl'));
   readonly other = computed<Lang>(() => (this.lang() === 'en' ? 'ar' : 'en'));
 
@@ -56,6 +57,15 @@ export class I18n {
       html.lang = this.lang();
       html.dir = this.dir();
     });
+  }
+
+  /** Load a language's texts (once). Called before the first render and before switching language. */
+  async ensure(lang: Lang): Promise<true> {
+    if (!this.packs()[lang]) {
+      const p = await PACK_LOADERS[lang]();
+      this.packs.update((x) => ({ ...x, [lang]: p }));
+    }
+    return true;
   }
 
   t(key: string): string {

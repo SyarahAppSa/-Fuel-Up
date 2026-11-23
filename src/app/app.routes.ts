@@ -1,5 +1,6 @@
+import { inject } from '@angular/core';
 import { Routes } from '@angular/router';
-import { PAGES, Page } from './core/i18n';
+import { I18n, PAGES, Page } from './core/i18n';
 
 /** Each page's code is loaded only when that page is visited. */
 const load: Record<Page, () => Promise<unknown>> = {
@@ -17,6 +18,12 @@ const load: Record<Page, () => Promise<unknown>> = {
 
 /** Arabic at /<page>, English at /en/<page>. Home is / and /en. */
 const pages = (prefix: string): Routes =>
-  PAGES.map((p) => ({ path: [prefix, p === 'home' ? '' : p].filter(Boolean).join('/'), loadComponent: load[p] as never, pathMatch: 'full' as const }));
+  PAGES.map((p) => ({
+    path: [prefix, p === 'home' ? '' : p].filter(Boolean).join('/'),
+    loadComponent: load[p] as never,
+    pathMatch: 'full' as const,
+    /* the page's language texts are loaded before the page shows */
+    canActivate: [() => inject(I18n).ensure(prefix === 'en' ? 'en' : 'ar')],
+  }));
 
 export const routes: Routes = [...pages(''), ...pages('en'), { path: '**', redirectTo: '' }];
