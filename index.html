@@ -911,6 +911,10 @@ i[data-ic] svg{width:100%;height:100%}
 @media (max-width:1000px){.tb-247,.topbar .mail{display:none}}
 @media (max-width:640px){.topbar .wrap.tb{min-height:34px}.tb-g:first-child{display:none}.tb-g{width:100%;justify-content:space-between}.tb-login{margin:0}}
 
+/* form: details textarea */
+.fl textarea{font:inherit;font-size:1rem;border-radius:12px;border:1px solid #CBD4EC;padding:12px 14px;background:var(--sky);color:var(--ink);width:100%;resize:vertical;min-height:110px;line-height:1.7}
+.fl textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(22,62,150,.15)}
+
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
 .opsroom{background:radial-gradient(45% 60% at 85% 0%,rgba(139,124,246,.18),rgba(6,18,47,0) 70%),radial-gradient(40% 50% at 5% 100%,rgba(139,124,246,.10),rgba(6,18,47,0) 70%),#06122F;color:#fff;padding-block:clamp(64px,8vw,104px)}
@@ -1371,7 +1375,7 @@ i[data-ic] svg{width:100%;height:100%}
 <section class="phero"><div class="wrap"><p class="crumbs"><a href="#home">الرئيسية</a> / تواصل معنا</p><h1>عقدك القادم يبدأ مع فيول آب</h1><p>املأ النموذج أو تواصل معنا مباشرة. فريقنا متاح على مدار الساعة.</p></div></section>
 <section class="sec quote" aria-labelledby="h-q"><div class="wrap q-grid">
   <div>
-    <div class="title"><span class="k">طلب عرض تشغيلي</span><h2 id="h-q">صف لنا احتياجك</h2><p>يصل طلبك إلى فريق المبيعات، ونعود إليك بعرض يناسب الكمية والموقع والجدول.</p></div>
+    <div class="title"><span class="k" id="q-kind">طلب عرض تشغيلي</span><h2 id="h-q">صف لنا احتياجك</h2><p>يصل طلبك إلى فريق المبيعات، ونعود إليك بعرض يناسب الكمية والموقع والجدول.</p></div>
     <div class="direct">
       <div><span class="ic"><i data-ic="phone"></i></span><span><small>الرقم الموحد</small><b>920009088</b></span></div>
       <div><span class="ic"><i data-ic="mobile"></i></span><span><small>الجوال</small><b>0500244460</b></span></div>
@@ -1384,11 +1388,12 @@ i[data-ic] svg{width:100%;height:100%}
     <div class="fl"><label for="q-company">اسم الشركة</label><input id="q-company" required autocomplete="organization" aria-describedby="q-company-e"><span class="err" id="q-company-e" aria-live="polite"></span></div>
     <div class="fl"><label for="q-name">اسم المسؤول</label><input id="q-name" required autocomplete="name" aria-describedby="q-name-e"><span class="err" id="q-name-e" aria-live="polite"></span></div>
     <div class="fl"><label for="q-mobile">رقم الجوال</label><input id="q-mobile" type="tel" inputmode="tel" required autocomplete="tel" placeholder="05XXXXXXXX" aria-describedby="q-mobile-e"><span class="err" id="q-mobile-e" aria-live="polite"></span></div>
-    <div class="fl"><label for="q-email">البريد الإلكتروني</label><input id="q-email" type="email" required autocomplete="email" placeholder="name@company.com" aria-describedby="q-email-e"><span class="err" id="q-email-e" aria-live="polite"></span></div>
+    <div class="fl"><label for="q-email">البريد الإلكتروني للعمل</label><input id="q-email" type="email" required autocomplete="email" placeholder="name@company.com" aria-describedby="q-email-e"><span class="err" id="q-email-e" aria-live="polite"></span></div>
     <div class="fl"><label for="q-city">المدينة</label><input id="q-city" required autocomplete="address-level2" aria-describedby="q-city-e"><span class="err" id="q-city-e" aria-live="polite"></span></div>
     <div class="fl"><label for="q-sector">القطاع</label><select id="q-sector" required aria-describedby="q-sector-e"></select><span class="err" id="q-sector-e" aria-live="polite"></span></div>
-    <div class="fl"><label for="q-volume">عدد المركبات أو حجم الاحتياج</label><input id="q-volume" required placeholder="مثال: 30,000 لتر شهريًا" aria-describedby="q-volume-e"><span class="err" id="q-volume-e" aria-live="polite"></span></div>
+    <div class="fl"><label for="q-volume">حجم الأسطول أو الاحتياج المتوقع</label><input id="q-volume" required placeholder="مثال: 30,000 لتر شهريًا" aria-describedby="q-volume-e"><span class="err" id="q-volume-e" aria-live="polite"></span></div>
     <div class="fl"><label for="q-service">الخدمة المطلوبة</label><select id="q-service" required aria-describedby="q-service-e"></select><span class="err" id="q-service-e" aria-live="polite"></span></div>
+    <div class="fl full"><label for="q-details">تفاصيل الاحتياج</label><textarea id="q-details" required rows="4" maxlength="3000" placeholder="مثال: نوع الوقود، موقع التوريد، عدد مرات التوريد، وموعد البدء المتوقع." aria-describedby="q-details-e"></textarea><span class="err" id="q-details-e" aria-live="polite"></span></div>
     <div class="full consent"><input type="checkbox" id="q-ok" aria-describedby="q-ok-e"><label for="q-ok">أوافق على <a href="#privacy">سياسة الخصوصية</a> وعلى تواصل فريق فيول آب معي بخصوص هذا الطلب.</label><span class="err" id="q-ok-e" aria-live="polite"></span></div>
     <div class="full status" id="q-st" role="status" aria-live="polite"></div>
     <div class="full foot"><small>نستخدم بياناتك للرد على طلبك فقط.</small><button class="btn btn-o" type="submit" id="q-sub">أرسل الطلب</button></div>
@@ -1601,19 +1606,48 @@ $("city").addEventListener("change",function(){var v=this.value,r=$("cityRes");
  if(v==="x"){r.className="res-c no";r.textContent="تواصل معنا على الرقم الموحد 920009088 لنحدد لك نطاق الخدمة المناسب.";return}
  r.className="res-c ok";r.textContent="نعم، تقع ضمن "+REGN[v][0]+".";regSel=v;renderCov()});
 
-/* ---------- forms (preview: no network) ---------- */
-var ids=["q-company","q-name","q-mobile","q-email","q-city","q-sector","q-volume","q-service"];
+/* ---------- forms → leads API → Excel Online ---------- */
+var LEADS_API="https://fuelapp-leads-api.onrender.com";
+var FORM_QUOTE="اطلب عرضًا تشغيليًا",FORM_CONTACT="تواصل معنا",formName=FORM_QUOTE,formStart=0;
+var ids=["q-company","q-name","q-mobile","q-email","q-city","q-sector","q-volume","q-service","q-details"];
+(function(){try{var p=new URLSearchParams(location.search),u=["utm_source","utm_medium","utm_campaign"].map(function(k){return p.get(k)}).filter(Boolean).join(" / ");
+ if(u&&!sessionStorage.getItem("fa_src"))sessionStorage.setItem("fa_src",u);
+ if(!sessionStorage.getItem("fa_ref")){var rf="";try{rf=document.referrer&&new URL(document.referrer).hostname!==location.hostname?new URL(document.referrer).hostname:""}catch(_){}sessionStorage.setItem("fa_ref",rf||"-")}}catch(_){}})();
+function leadSource(){try{var s=sessionStorage.getItem("fa_src");if(s)return s;var r=sessionStorage.getItem("fa_ref");return r&&r!=="-"?"إحالة: "+r:"مباشر"}catch(_){return "مباشر"}}
+document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest('a[href="#contact"]');if(!a)return;
+ formName=/تواصل/.test(a.textContent)?FORM_CONTACT:FORM_QUOTE;$("q-kind").textContent=formName===FORM_CONTACT?"تواصل معنا":"طلب عرض تشغيلي"});
+var warmed=false;function warm(){if(warmed)return;warmed=true;try{fetch(LEADS_API+"/api/health",{mode:"cors"}).catch(function(){})}catch(_){}}
+$("qf").addEventListener("focusin",function(){if(!formStart)formStart=Date.now();warm()});
 function err(id,m){$(id+"-e").textContent=m||"";if(m)$(id).setAttribute("aria-invalid","true");else $(id).removeAttribute("aria-invalid")}
-function check(id){if(id==="q-ok"){var ok=$("q-ok").checked;err("q-ok",ok?"":"يلزم موافقتك حتى نتمكن من التواصل معك.");return ok}
+function normMobile(v){return v.replace(/[٠-٩]/g,function(c){return "٠١٢٣٤٥٦٧٨٩".indexOf(c)}).replace(/[\s\-().]/g,"").replace(/^(\+966|00966|966)/,"0").replace(/^5(\d{8})$/,"05$1")}
+function check(id){if(id==="q-ok"){var ok=$("q-ok").checked;err("q-ok",ok?"":"يلزم موافقتك على سياسة الخصوصية حتى نتمكن من التواصل معك.");return ok}
  var v=($(id).value||"").trim();if(!v){err(id,"هذا الحقل مطلوب.");return false}
- if(id==="q-mobile"){var d=v.replace(/[\s-]/g,"").replace(/^(\+966|00966|966)/,"0");if(!/^05\d{8}$/.test(d)){err(id,"أدخل رقم جوال سعوديًا من 10 أرقام يبدأ بـ 05.");return false}}
- if(id==="q-email"&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)){err(id,"أدخل بريدًا إلكترونيًا صحيحًا مثل name@company.com.");return false}
+ if(id==="q-mobile"&&!/^05\d{8}$/.test(normMobile(v))){err(id,"أدخل رقم جوال سعوديًا من 10 أرقام يبدأ بـ 05.");return false}
+ if(id==="q-email"&&!/^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(v)){err(id,"أدخل بريدًا إلكترونيًا صحيحًا مثل name@company.com.");return false}
+ if(id==="q-details"&&v.length<10){err(id,"اكتب تفاصيل أكثر قليلًا حتى نجهّز لك عرضًا مناسبًا.");return false}
  err(id,"");return true}
 ids.forEach(function(id){$(id).addEventListener("blur",function(){if(this.value)check(id)});$(id).addEventListener("input",function(){if(this.getAttribute("aria-invalid"))check(id)})});
 $("q-ok").addEventListener("change",function(){check("q-ok")});
-$("qf").addEventListener("submit",function(ev){ev.preventDefault();var st=$("q-st");st.className="full status";st.textContent="";if($("q-web").value)return;
+var FIELD={company:"q-company",name:"q-name",mobile:"q-mobile",email:"q-email",city:"q-city",sector:"q-sector",volume:"q-volume",service:"q-service",details:"q-details",consent:"q-ok"};
+var FAIL="تعذّر إرسال طلبك الآن بسبب خلل تقني مؤقت، ولم يُسجَّل بعد. بياناتك ما زالت في النموذج؛ أعد المحاولة بعد قليل، أو تواصل معنا مباشرة على الرقم الموحد 920009088 أو Info@Fuelapp.sa.";
+$("qf").addEventListener("submit",function(ev){ev.preventDefault();var st=$("q-st"),b=$("q-sub");if(b.disabled)return;st.className="full status";st.textContent="";
  var bad=ids.concat(["q-ok"]).filter(function(id){return !check(id)});if(bad.length){st.className="full status bad";st.textContent="راجع الحقول المحددة ثم أعد الإرسال.";$(bad[0]).focus();return}
- var b=$("q-sub");b.disabled=true;b.textContent="جارٍ الإرسال…";setTimeout(function(){b.disabled=false;b.textContent="أرسل الطلب";st.className="full status ok";st.textContent="اكتمل الطلب. هذه نسخة معاينة فلم يُرسل شيء؛ في النسخة النهائية يصل مباشرة إلى فريق المبيعات."},700)});
+ var v=function(id){return $(id).value.trim()};
+ var payload={company:v("q-company"),name:v("q-name"),mobile:normMobile(v("q-mobile")),email:v("q-email"),city:v("q-city"),sector:v("q-sector"),volume:v("q-volume"),service:v("q-service"),details:v("q-details"),
+  consent:$("q-ok").checked,form:formName,page:location.href,source:leadSource(),website:$("q-web").value,elapsed:formStart?Date.now()-formStart:-1};
+ b.disabled=true;b.textContent="جارٍ الإرسال…";var slow=setTimeout(function(){st.className="full status";st.textContent="نؤكد حفظ طلبك، لحظات من فضلك…"},6000);
+ var ctl=window.AbortController?new AbortController():null,to=setTimeout(function(){ctl&&ctl.abort()},75000);
+ function done(){clearTimeout(slow);clearTimeout(to);b.disabled=false;b.textContent="أرسل الطلب"}
+ fetch(LEADS_API+"/api/leads",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload),signal:ctl&&ctl.signal})
+ .then(function(r){return r.json().catch(function(){return {}}).then(function(j){return {s:r.status,j:j}})})
+ .then(function(x){done();
+  if(x.s===200&&x.j.ok){$("qf").reset();formStart=0;st.className="full status ok";
+   st.textContent=x.j.id?("تم استلام طلبك بنجاح. رقم طلبك: "+x.j.id+". سيتواصل معك فريق المبيعات قريبًا."+(x.j.mode==="demo"?" (وضع المعاينة: لم يُحفظ في Excel بعد)":"")):"تم استلام طلبك بنجاح. سيتواصل معك فريق المبيعات قريبًا.";return}
+  if(x.s===422&&x.j.fields){var first=null;Object.keys(x.j.fields).forEach(function(k){var id=FIELD[k];if(id){check(id)||(first=first||id);if(!$(id+"-e").textContent){err(id,"تحقق من هذا الحقل.");first=first||id}}});
+   st.className="full status bad";st.textContent="راجع الحقول المحددة ثم أعد الإرسال.";if(first)$(first).focus();return}
+  st.className="full status bad";
+  st.textContent=x.s===429?"وصلنا عدد كبير من الطلبات من جهازك خلال وقت قصير. أعد المحاولة بعد عشر دقائق، أو اتصل على الرقم الموحد 920009088.":FAIL+(x.j.ref?" (مرجع: "+x.j.ref+")":"")})
+ .catch(function(){done();st.className="full status bad";st.textContent=FAIL})});
 
 
 /* ---------- dual date ---------- */
