@@ -5,13 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fuel App | Fuel for your operations. Under control.</title>
 <meta name="description" content="Fuel App, a Maisan Company brand: diesel and gasoline supply and Aramco resource transport for companies, factories and projects across the Central, Eastern, Western and Northern regions, with a platform to track orders and invoices, paperless.">
+<link rel="canonical" href="https://fuelapp.sa/en/">
 <link rel="alternate" hreflang="ar" href="https://fuelapp.sa/">
 <link rel="alternate" hreflang="en" href="https://fuelapp.sa/en/">
 <link rel="alternate" hreflang="x-default" href="https://fuelapp.sa/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fuel App">
 <meta property="og:title" content="Fuel App | Fuel for your operations. Under control.">
 <meta property="og:description" content="Fuel App, a Maisan Company brand: diesel and gasoline supply and Aramco resource transport for companies, factories and projects across the Central, Eastern, Western and Northern regions, with a platform to track orders and invoices, paperless.">
+<meta property="og:url" content="https://fuelapp.sa/en/">
 <meta property="og:locale" content="en_US">
-<link rel="icon" href="../assets/logo-color.webp">
+<meta property="og:image" content="https://fuelapp.sa/en/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B2463">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@500&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -938,6 +949,19 @@ i[data-ic] svg{width:100%;height:100%}
 .tb-wa:hover{background:#1EBE5A}
 .tb-wa+.tb-login{margin-inline-start:8px}
 
+/* touch targets (QA) */
+.dots button{position:relative}
+.dots button::after{content:"";position:absolute;inset:-16px -4px}
+@media (pointer:coarse),(max-width:640px){
+ .tb-wa,.tb-login,.tb-lang{min-height:38px;padding:6px 13px}
+ .topbar .wrap.tb{min-height:50px}
+ .more{min-height:40px}
+ .vis-tog button{min-height:34px;padding:6px 12px}
+ .consent input[type=checkbox]{width:24px;height:24px}
+}
+
+a.cl{color:inherit;text-decoration:none}a.cl:hover{text-decoration:underline;text-underline-offset:3px}
+
 /* ================= غرفة عمليات فيول آب =================
    Deep navy room, quiet lavender for technology, orange only for live status + CTA. */
 .opsroom{background:radial-gradient(45% 60% at 85% 0%,rgba(139,124,246,.18),rgba(6,18,47,0) 70%),radial-gradient(40% 50% at 5% 100%,rgba(139,124,246,.10),rgba(6,18,47,0) 70%),#06122F;color:#fff;padding-block:clamp(64px,8vw,104px)}
@@ -1164,8 +1188,8 @@ h1,h2,h3{letter-spacing:-.015em}
     <span class="tb-i tb-247"><i aria-hidden="true"></i>Operations team available 24/7</span>
   </div>
   <div class="tb-g">
-    <span class="tb-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><b class="ltr">920009088</b></span>
-    <span class="tb-i mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><b class="ltr">Info@Fuelapp.sa</b></span>
+    <span class="tb-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a class="cl" href="tel:920009088"><b class="ltr">920009088</b></a></span>
+    <span class="tb-i mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a class="cl" href="mailto:Info@Fuelapp.sa"><b class="ltr">Info@Fuelapp.sa</b></a></span>
     <a class="tb-wa" href="https://wa.me/966920009088?text=Hello%2C%20I'd%20like%20to%20ask%20about%20Fuel%20App's%20services." target="_blank" rel="noopener" aria-label="Message us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg>WhatsApp</a>
     <a class="tb-login" href="#platform"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Client login</a>
     <a class="tb-lang" href="../" data-lang="ar" lang="ar" hreflang="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>العربية</a>
@@ -1314,7 +1338,7 @@ h1,h2,h3{letter-spacing:-.015em}
     <article><i data-ic="invoice"></i><h3>Documented operations</h3><p>Every operation is documented with an order number and an invoice in the app.</p></article>
     <article><i data-ic="clock"></i><h3>24/7 reliability</h3><p>An operations team on standby around the clock, seven days a week.</p></article>
   </div>
-  <p class="center-link"><a class="more" href="#hse">Health, Safety &amp; Environment (HSE) policy <span class="flip" aria-hidden="true">→</span></a></p>
+  <p class="center-link"><a class="more" href="#hse"Quality, Health, Safety &amp; Environment (QHSE) policy <span class="flip" aria-hidden="true">→</span></a></p>
 </div></section>
 </div>
 
@@ -1420,9 +1444,9 @@ h1,h2,h3{letter-spacing:-.015em}
   <div>
     <div class="title"><span class="k" id="q-kind">Operational quote request</span><h2 id="h-q">Tell us what you need</h2><p>Fill in your details and send them via WhatsApp directly to our sales team. We will come back to you with a quote tailored to your volume, location and schedule.</p></div>
     <div class="direct">
-      <div><span class="ic"><i data-ic="phone"></i></span><span><small>Unified number</small><b>920009088</b></span></div>
-      <div><span class="ic"><i data-ic="mobile"></i></span><span><small>Mobile</small><b>0500244460</b></span></div>
-      <div><span class="ic"><i data-ic="mail"></i></span><span><small>Email</small><b>Info@Fuelapp.sa</b></span></div>
+      <div><span class="ic"><i data-ic="phone"></i></span><span><small>Unified number</small><a class="cl" href="tel:920009088"><b>920009088</b></a></span></div>
+      <div><span class="ic"><i data-ic="mobile"></i></span><span><small>Mobile</small><a class="cl" href="tel:+966500244460"><b>0500244460</b></a></span></div>
+      <div><span class="ic"><i data-ic="mail"></i></span><span><small>Email</small><a class="cl" href="mailto:Info@Fuelapp.sa"><b>Info@Fuelapp.sa</b></a></span></div>
       <div><span class="ic"><i data-ic="pin"></i></span><span><small>Headquarters</small><em>Street 92, behind Kingdom Tower, Al Olaya, Riyadh</em></span></div>
     </div>
   </div>
@@ -1454,7 +1478,7 @@ h1,h2,h3{letter-spacing:-.015em}
 <section class="sec"><div class="wrap policy" id="pol-terms"></div></section>
 </div>
 <div class="page" data-page="hse" hidden>
-<section class="phero"><div class="wrap"><p class="crumbs"><a href="#home">Home</a> / Health, Safety &amp; Environment (HSE)</p><h1>Quality, Health, Safety &amp; Environment Policy</h1><p>Our commitments in every loading, transport and supply operation, to our team, our clients, the community and the environment.</p></div></section>
+<section class="phero"><div class="wrap"><p class="crumbs"><a href="#home">Home</a> / Quality, Health, Safety &amp; Environment (QHSE)</p><h1>Quality, Health, Safety &amp; Environment Policy</h1><p>Our commitments in every loading, transport and supply operation, to our team, our clients, the community and the environment.</p></div></section>
 <section class="sec"><div class="wrap policy" id="pol-hse"></div></section>
 </div>
 
@@ -1471,7 +1495,7 @@ h1,h2,h3{letter-spacing:-.015em}
   <div><h3>Company</h3><ul><li><a href="#about">About</a></li><li><a href="#platform">Platform</a></li><li><a href="#coverage">Coverage</a></li><li><a href="#clients">Clients</a></li><li><a href="#contact">Contact us</a></li></ul></div>
   <div><h3>Services</h3><ul id="ftrSvc"></ul></div>
   <div><h3>Policies</h3><ul><li><a href="#privacy">Privacy Policy</a></li><li><a href="#terms">Terms &amp; Conditions</a></li><li><a href="#hse">Quality, Health, Safety &amp; Environment</a></li></ul></div>
-  <div><h3>Contact us</h3><ul><li>Unified number: <span class="num">920009088</span></li><li>Mobile: <span class="num">0500244460</span></li><li>Email: <span class="num">Info@Fuelapp.sa</span></li><li>Street 92, behind Kingdom Tower, Al Olaya, Riyadh</li></ul></div>
+  <div><h3>Contact us</h3><ul><li>Unified number: <a class="cl" href="tel:920009088"><span class="num">920009088</span></a></li><li>Mobile: <a class="cl" href="tel:+966500244460"><span class="num">0500244460</span></a></li><li>Email: <a class="cl" href="mailto:Info@Fuelapp.sa"><span class="num">Info@Fuelapp.sa</span></a></li><li>Street 92, behind Kingdom Tower, Al Olaya, Riyadh</li></ul></div>
   <div class="legal"><span>© 2026 Fuel App, a Maisan Company brand. All rights reserved.</span><span class="m">fuelapp.sa</span></div>
 </div></footer>
 <a class="wa-fab" href="https://wa.me/966920009088?text=Hello%2C%20I'd%20like%20to%20ask%20about%20Fuel%20App's%20services." target="_blank" rel="noopener" aria-label="Contact us on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3Z"/></svg><span>Contact us on WhatsApp</span></a>
@@ -1561,11 +1585,11 @@ function pol(id,upd,secs){$(id).innerHTML='<p class="upd">Last updated: November
 pol("pol-privacy",1,[
  ["Who we are","<p>Fuel App is a brand of Maisan Company, headquartered in Riyadh, Kingdom of Saudi Arabia. This policy explains how we handle the personal data we receive through this website and the Fuel App platform, in accordance with the Personal Data Protection Law (PDPL) of the Kingdom of Saudi Arabia and its Implementing Regulations.</p>"],
  ["Data we collect","<ul><li>Contact details you enter in the website forms: company name, contact person's name, mobile number, email address, city, sector and volume of requirement.</li><li>Account, order and invoice data for platform clients.</li><li>Basic technical data, such as browser type and time of visit, for security and performance-improvement purposes.</li></ul>"],
- ["How we use your data","<ul><li>To respond to quote requests and communicate with you about them.</li><li>To fulfill supply orders, issue e-invoices and track the status of shipments.</li><li>To send the newsletter to those who have subscribed, with the option to unsubscribe at any time.</li><li>To comply with regulatory and accounting requirements.</li></ul>"],
- ["Data sharing","<p>We do not sell or rent your data. We share it only with the parties within Maisan Company that are necessary to deliver the service, with technology service providers bound by confidentiality, or with government authorities where there is a lawful request.</p>"],
+ ["How we use your data","<ul><li>To respond to quote requests and communicate with you about them.</li><li>To fulfill supply orders, issue e-invoices and track the status of shipments.</li><li>To comply with regulatory and accounting requirements.</li></ul>"],
+ ["Data sharing","<p>We do not sell or rent your data. We share it only with the parties within Maisan Company that are necessary to deliver the service, with technology service providers bound by confidentiality, or with government authorities where there is a lawful request.</p><p>When you send a request or message us via WhatsApp, your data is transmitted through WhatsApp, a service owned by Meta, under its own terms and privacy policy, and may be processed outside the Kingdom. You can instead contact us via our unified number or email.</p>"],
  ["Data protection and retention","<p>We apply technical and organizational measures to protect data against unauthorized access. We retain data for as long as necessary to fulfill the purpose for which it was collected, or for the period required by law, after which we destroy it securely.</p>"],
  ["Your rights","<ul><li>To access the personal data we hold about you and obtain a copy of it.</li><li>To request the correction or updating of your data.</li><li>To request the destruction of your data once there is no longer a legal need to retain it.</li><li>To withdraw your consent to marketing communications at any time.</li></ul>"],
- ["Cookies","<p>The website uses cookies that are essential to its operation, and may use analytics cookies to measure performance. You can manage them through your browser settings.</p>"],
+ ["Cookies","<p>The website does not use advertising or tracking cookies. Your browser only stores simple preferences, such as your display language, which you can clear from your browser settings at any time.</p>"],
  ["Privacy inquiries","<div class='box'><p>For any inquiry or request regarding your data: email <b class='ltr'>Info@Fuelapp.sa</b> or call our unified number <b class='ltr'>920009088</b>.</p></div>"]
 ]);
 pol("pol-terms",1,[
@@ -1684,6 +1708,7 @@ $("qf").addEventListener("submit",function(ev){ev.preventDefault();var st=$("q-s
  var bad=ids.concat(["q-ok"]).filter(function(id){return !check(id)});if(bad.length){st.className="full status bad";st.textContent="Please review the highlighted fields and submit again.";$(bad[0]).focus();return}
  var v=function(id){return $(id).value.trim()};
  var url="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(waText(v));
+ var sb=$("q-sub");if(sb.disabled)return;sb.disabled=true;setTimeout(function(){sb.disabled=false},4000);
  var w=null;try{w=window.open(url,"_blank");if(w)w.opener=null}catch(_){}
  if(!w)location.href=url;
  st.className="full status ok";st.innerHTML="";st.appendChild(document.createTextNode("We've prepared a WhatsApp message with your request details. Tap “Send” in WhatsApp to deliver your request to our sales team. "));
