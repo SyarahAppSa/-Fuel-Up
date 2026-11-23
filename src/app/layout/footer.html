@@ -1,4 +1,4 @@
-@defer (hydrate on viewport) {
+@defer (hydrate on viewport; hydrate on interaction) {
 <footer class="ftr"><div class="wrap">
   <div><a class="brand" [routerLink]="i.link('home')"><img src="assets/logo-white.webp" width="52" height="52" alt=""><span><b>{{ i.t('header.1') }}</b><small>{{ i.t('header.2') }}</small></span></a><p>{{ i.t('footer.1') }}</p></div>
   <div><h3>{{ i.t('footer.2') }}</h3><ul><li><a [routerLink]="i.link('about')">{{ i.t('header.5') }}</a></li><li><a [routerLink]="i.link('platform')">{{ i.t('header.7') }}</a></li><li><a [routerLink]="i.link('coverage')">{{ i.t('header.8') }}</a></li><li><a [routerLink]="i.link('clients')">{{ i.t('header.9') }}</a></li><li><a [routerLink]="i.link('contact')">{{ i.t('header.10') }}</a></li></ul></div>
