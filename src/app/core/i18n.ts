@@ -1,5 +1,6 @@
 import { DOCUMENT, Injectable, computed, effect, inject, signal } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { PlatformLocation } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import type { UiStrings } from '../i18n/ui';
 import type { SiteContent } from '../data/content.types';
@@ -50,7 +51,8 @@ export class I18n {
       this.lang.set(p.lang);
       this.page.set(p.page);
     };
-    apply(this.router.url);
+    /* the router has not navigated yet at startup: take the language from the address itself */
+    apply(inject(PlatformLocation).pathname || this.router.url);
     this.router.events.pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd)).subscribe((e) => apply(e.urlAfterRedirects));
     effect(() => {
       const html = this.doc.documentElement;
