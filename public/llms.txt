@@ -1,0 +1,49 @@
+# Fuel App (فيول آب)
+
+> Fuel App (فيول آب) is a Saudi fuel supply and transport brand of Maisan Company (شركة ميسان), based in Riyadh, Saudi Arabia. It supplies diesel and gasoline, transports resources from Aramco sites, and gives business customers a platform to order and track fuel deliveries and receive paperless e-invoices. It serves companies, factories, fuel stations, projects and fleets in the Central, Eastern, Western and Northern regions of the Kingdom.
+
+Language: the site is Arabic-first (https://fuelapp.sa/) with a full English version (https://fuelapp.sa/en/).
+
+## Contact
+- Unified number (also WhatsApp): 920009088 (+966 920009088)
+- Mobile: 0500244460
+- Email: Info@Fuelapp.sa
+- Head office: Street 92, behind Kingdom Tower, Al Olaya, Riyadh, Saudi Arabia
+- Quote requests: https://fuelapp.sa/en/contact/ (the form opens WhatsApp with a ready-made message to 920009088)
+
+## Services
+- Diesel supply: for companies, factories and fuel stations, in precise quantities and on committed schedules.
+- Gasoline supply: for fuel stations and the daily requirements of companies.
+- Regular supply contracts: an ongoing supply relationship with follow-up on orders and invoices.
+- Resource transport from Aramco: crude, bitumen, MC1 and MC2 from Aramco sites to work sites.
+- Bulk fuel transport: within the Kingdom.
+- Diesel and industrial oils: for energy, construction and industrial operations.
+- Special logistics requests: solutions designed around specific requirements.
+
+## Sectors served
+Construction & projects, factories, fuel stations, transport & logistics, utilities & facilities, commercial fleets.
+
+## Coverage (hub city of each region)
+- Central Region (hub: Riyadh): Riyadh, Al-Kharj, Al Majmaah, Al-Qassim (Buraidah) and industrial cities
+- Eastern Region (hub: Dammam): Dammam, Al Khobar, Jubail, Al-Ahsa and industrial cities
+- Western Region (hub: Jeddah): Jeddah, Makkah, Taif, Rabigh, Madinah, Yanbu
+- Northern Region (hub: Hail): Hail, Tabuk, Al-Jouf (Sakaka), Northern Borders (Arar)
+
+## Pages (English)
+- [Home](https://fuelapp.sa/en/): overview of Fuel App
+- [About](https://fuelapp.sa/en/about/): the company and its safety and documentation approach
+- [Services](https://fuelapp.sa/en/services/): all services, tanker capacities and sectors
+- [Platform](https://fuelapp.sa/en/platform/): ordering, tracking and paperless e-invoices
+- [Coverage](https://fuelapp.sa/en/coverage/): regions and cities served
+- [Clients](https://fuelapp.sa/en/clients/): client companies and national projects
+- [Contact](https://fuelapp.sa/en/contact/): quote request and contact details
+- [Privacy Policy](https://fuelapp.sa/en/privacy/), [Terms & Conditions](https://fuelapp.sa/en/terms/), [QHSE Policy](https://fuelapp.sa/en/hse/)
+
+## الصفحات بالعربية
+- [الرئيسية](https://fuelapp.sa/): نظرة عامة على فيول آب
+- [من نحن](https://fuelapp.sa/about/)
+- [خدماتنا](https://fuelapp.sa/services/): توريد الديزل والبنزين، عقود التوريد المنتظمة، نقل الموارد من أرامكو، نقل الوقود بالجملة، الديزل والزيوت الصناعية، الطلبات اللوجستية الخاصة
+- [المنصة](https://fuelapp.sa/platform/): الطلبات والتتبع والفواتير الإلكترونية بلا ورق
+- [التغطية](https://fuelapp.sa/coverage/): المنطقة الوسطى والشرقية والغربية والشمالية
+- [عملاؤنا](https://fuelapp.sa/clients/)
+- [تواصل معنا](https://fuelapp.sa/contact/): الرقم الموحد وواتساب 920009088، البريد Info@Fuelapp.sa

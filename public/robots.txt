@@ -1,3 +1,27 @@
+# Fuel App (فيول آب): search engines and AI assistants are welcome to read this site.
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: YandexBot
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Amazonbot
+User-agent: meta-externalagent
+User-agent: MistralAI-User
+User-agent: cohere-ai
+Allow: /
+
 User-agent: *
 Allow: /
 
